@@ -1,0 +1,105 @@
+﻿
+
+.layer h2 {
+	position: relative;
+	top: 30%;
+	margin: 0;
+	font-size: 6.25em;
+}
+
+.layer p {
+	position: relative;
+	top: 30%;
+	margin: 0;
+}
+.layer{}
+.layer.one th {
+
+}
+
+.layer.two th{
+	background:#32A45A
+}
+
+.layer.three th{
+	background:#1FA7B2
+}
+
+.bullets {
+	position: absolute;
+	width: 100%;
+	top: 0;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+	z-index:2;
+	font-size:0;
+}
+
+	.bullets li {
+    	position:relative;
+    	left:0;
+		display: inline-block;
+	    width:120px;
+	    height:120px;
+	    line-height:120px;
+	    border-radius:120px;
+		margin: 0 30px;
+		font-size:14px;
+       -webkit-transition:.4s all;-moz-transition:.4s all;-ms-transition:.4s all;transition:.4s all;
+	
+		box-shadow: 0px 0px 4px rgba( 0, 0, 0, 0.2 );
+		cursor: pointer;
+        display:inline-block;
+		-webkit-tap-highlight-color: rgba( 0, 0, 0, 0 );
+	}
+
+	
+	
+
+	.bullets li:hover{background:#1FA7B2;-moz-transition: all 0.5s ease-in-out;
+            -webkit-transition: all 0.5s ease-in-out;
+            -o-transition: all 0.5s ease-in-out;
+            -ms-transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out;
+            -moz-transform: rotate(-360deg);
+            -webkit-transform: rotate(-360deg);
+            -o-transform: rotate(-360deg);
+            -ms-transform: rotate(-360deg);
+            transform: rotate(-360deg);}
+      	.bullets li:nth-child(n).active {cursor: default;background:#c01;}     
+    .bullets li:before,	.bullets li:after{position:absolute;top:20px;left:0;width:120px;text-align:center;color:#fff}
+   	.bullets li:nth-child(1):before{}
+	.bullets li:nth-child(1):after{content:'传输完毕';}
+	.bullets li:nth-child(1){background:#F5BA5D  url(../../images/rotate1.png) no-repeat 10px 0px;}
+	.bullets li:nth-child(1).active{background:#E95F4C url(../../images/rotate1.png) no-repeat 10px 0px;}
+	.bullets li:nth-child(2):after{content:'正在传输';}
+	.bullets li:nth-child(2).active{background:#E95F4C url(../../images/rotate2.png) no-repeat 10px 0px;}
+	.bullets li:nth-child(2){background:#F5BA5D  url(../../images/rotate2.png) no-repeat 10px 0px;}
+	
+	.bullets li:nth-child(3):after{content:'传输发生异常';}
+	.bullets li:nth-child(3){background:#F5BA5D  url(../../images/rotate3.png) no-repeat 10px 0px;}
+	.bullets li:nth-child(3).active{background:#E95F4C url(../../images/rotate3.png) no-repeat 10px 0px;}
+	.bullets li.active{	box-shadow: 0px 0px 14px rgba(71, 22, 5,1);}
+	
+
+
+@media screen and (max-width: 400px) {
+	body {
+		font-size: 12px;
+	}
+
+	.layer h2 {
+		font-size: 5em;
+	}
+
+	.bullets li {
+		margin: 0 6px;
+	}
+}
+
+.bullets li.on{-webkit-transform:rotate(360deg);-moz-transform:rotate(360deg);-ms-transform:rotate(360deg);transform:rotate(360deg);} 
+
+
+
+

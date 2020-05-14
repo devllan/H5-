@@ -1,0 +1,1085 @@
+﻿<!DOCTYPE html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></meta>
+<title>拓扑管理</title>
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+<link href='css/sample.css' rel='stylesheet' type='text/css'>
+<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="css/default.css" />
+<link media="screen" rel="stylesheet" href="css/demo.css"/>
+<link media="screen" rel="stylesheet" href="css/taks.css"/>
+<link rel="stylesheet" type="text/css" href="css/base.css" media="all" />
+<link media="screen" rel="stylesheet" href="css/gplotset.css"/>
+<link rel="stylesheet" type="text/css" href="css/component.css" />
+<script type="text/javascript" charset="utf-8" src="js/jquery-2.1.1.min.js"></script>
+</head>
+<body>
+	<div class="logBox">
+		<div class="login"><strong> CDN管理员，欢迎您 </strong>
+		    <div class="siderNav"><a href="#">自定义桌面</a> | <a href="#">设置</a></div>
+    	</div>
+	</div>
+    <div class="topnav">
+<section class="demo">
+	<div id="nav">
+		<ul class="nav-menu clearfix unstyled">
+	    	<li class="logolist"><img src="img/logo.png"/></li>
+			<li class="homelist"><a href="index.html" class="three-d active"><i class="fa fa-home"></i>首页<span class="three-d-box"><span class="front"><i class="fa fa-home"></i>首页</span><span class="back"><i class="fa fa-home"></i>首页</span></span></a></li>
+		
+			<li>
+			<a href="inpouring.html" class="three-d"><i class="fa fa-tasks"></i>业务管理<span class="three-d-box"><span class="front"><i class="fa fa-tasks"></i>业务管理</span><span class="back"><i class="fa fa-tasks"></i>业务管理</span></span></a>
+			<ul class="clearfix unstyled drop-menu">
+			
+			            <li>
+						<a href="inpouring.html" class="three-d">
+							<i class="fa fa-sort-amount-desc"></i>内容注入
+							<span class="three-d-box"><span class="front"><i class="fa fa-sort-amount-desc"></i>内容注入</span><span class="back"><i class="fa fa-sort-amount-desc"></i>内容注入</span></span>
+						</a>
+						</li>
+						
+						<li>
+						<a href="dissemination.html" class="three-d">
+							<i class="fa fa-share-alt"></i>内容分发
+							<span class="three-d-box"><span class="front"><i class="fa fa-share-alt"></i>内容分发</span><span class="back"><i class="fa fa-share-alt"></i>内容分发</span></span>
+						</a>
+						</li>
+						
+						
+						<li>
+						<a href="content-management.html" class="three-d">
+							<i class="fa fa-navicon"></i>内容管理
+							<span class="three-d-box"><span class="front"><i class="fa fa-navicon"></i>内容管理</span><span class="back"><i class="fa fa-navicon"></i>内容管理</span></span>
+						</a>
+						
+				          	<ul class="secondul">
+			                  <li>
+			                  <a href="content-management.html" class="three-d"><i class="fa fa-file-text-o"></i>资源目录分布列表
+			                  <span class="three-d-box"><span class="front"><i class="fa fa-file-text-o"></i>资源目录分布列表</span><span class="back"><i class="fa fa-file-text-o"></i>资源目录分布列表</span></span>
+			                  </a>
+			                  </li>
+			                  
+			                  <li>
+			                  <a href="resources-push.html" class="three-d"><i class="fa fa-sitemap"></i>资源推送
+			                  <span class="three-d-box"><span class="front"><i class="fa fa-sitemap"></i>资源推送</span><span class="back"><i class="fa fa-sitemap"></i>资源推送</span></span>
+			                  </a>
+			                  </li>
+			                </ul>
+			                
+						</li>
+						
+						<li>
+						<a href="caching.html" class="three-d">
+							<i class="fa fa-exchange"></i>内容缓存
+							<span class="three-d-box"><span class="front"><i class="fa fa-exchange"></i>内容缓存</span><span class="back"><i class="fa fa-exchange"></i>内容缓存</span></span>
+						</a></li>
+						
+				</ul>
+			</li>
+		 	<li>
+			<a href="gplotset.html" class="three-d"><i class="fa fa-globe"></i>网络管理<span class="three-d-box"><span class="front"><i class="fa fa-globe"></i>网络管理</span><span class="back"><i class="fa fa-globe"></i>网络管理</span></span></a>
+			<ul class="clearfix unstyled drop-menu">
+			
+			 <li>
+					<a href="gplotset.html" class="three-d"><i class="fa fa-sitemap"></i>拓扑管理
+						<span class="three-d-box">
+							<span class="front"><i class="fa fa-sitemap"></i>拓扑管理</span>
+							<span class="back"><i class="fa fa-sitemap"></i>拓扑管理</span>
+						</span>
+					</a>
+				</li>
+						
+				<li>
+					<a href="hd-cdmagps.html" class="three-d"><i class="fa fa-retweet"></i>调度管理
+						<span class="three-d-box">
+							<span class="front"><i class="fa fa-retweet"></i>调度管理</span>
+							<span class="back"><i class="fa fa-retweet"></i>调度管理</span>
+						</span>
+					</a>
+				</li>
+						
+				<li>
+					<a href="warnninglist.html" class="three-d"><i class="fa fa-support"></i>性能管理
+							<span class="three-d-box">
+								<span class="front"><i class="fa fa-support"></i>性能管理</span>
+								<span class="back"><i class="fa fa-support"></i>性能管理</span>
+							</span>
+					</a>
+						<ul class="secondul">
+                             <li>
+								 <a href="warnninglist.html" class="three-d"><i class="fa fa-file-text-o"></i>性能阀值信息列表 
+									<span class="three-d-box">
+										<span class="front"><i class="fa fa-file-text-o"></i>性能阀值信息列表</span>
+										<span class="back"><i class="fa fa-file-text-o"></i>性能阀值信息列表</span>
+									</span>
+								 </a>
+							</li>
+			                <li>
+								<a href="setwarn.html" class="three-d"><i class="fa fa-sort-numeric-asc"></i>性能阀值设置
+									<span class="three-d-box">
+									   <span class="front"><i class="fa fa-sort-numeric-asc"></i>性能阀值设置</span>
+									   <span class="back"><i class="fa fa-sort-numeric-asc"></i>性能阀值设置</span>
+									</span>
+								</a>
+			                </li>
+			                  
+			                <li>
+								<a href="real-time.html" class="three-d"><i class="fa fa-area-chart"></i>实时性能监控
+								  <span class="three-d-box">
+										<span class="front"><i class="fa fa-area-chart"></i>实时性能监控</span>
+										<span class="back"><i class="fa fa-area-chart"></i>实时性能监控</span>
+								  </span>
+			                  </a>
+			                  </li>
+			                  
+			                <li>
+			                  <a href="fresh-diagnose.html" class="three-d"><i class="fa fa-ioxhost"></i>性能分析管理
+								  <span class="three-d-box">
+									  <span class="front"><i class="fa fa-ioxhost"></i>性能分析管理</span>
+									  <span class="back"><i class="fa fa-ioxhost"></i>性能分析管理</span>
+								 </span>
+			                  </a>
+			                </li>	 
+			                
+			                
+			                <li>
+			                  <a href="task-diagnose.html" class="three-d"><i class="fa fa-file-text-o"></i>测量任务下发列表
+								  <span class="three-d-box">
+									  <span class="front"><i class="fa fa-file-text-o"></i>测量任务下发列表</span>
+									  <span class="back"><i class="fa fa-file-text-o"></i>测量任务下发列表</span>
+								 </span>
+			                  </a>
+			                 </li>
+			                  
+                             <li>
+								 <a href="task.html" class="three-d"><i class="fa fa-plus-square-o"></i>新建测量任务
+									<span class="three-d-box">
+										<span class="front"><i class="fa fa-plus-square-o"></i>新建测量任务</span>
+										<span class="back"><i class="fa fa-plus-square-o"></i>新建测量任务</span>
+									</span>
+								 </a>
+							</li>
+						</ul>
+			        </li>
+						
+					<li>
+						<a href="warnlist.html" class="three-d"><i class="fa fa-warning"></i>告警管理
+							<span class="three-d-box">
+								<span class="front"><i class="fa fa-warning"></i>告警管理</span>
+								<span class="back"><i class="fa fa-warning"></i>告警管理</span>
+							</span>
+						</a>
+                         <ul class="secondul">
+                            <li>
+								<a href="warnlist.html" class="three-d"><i class="fa fa-file-text-o"></i>告警信息列表	
+								   <span class="three-d-box">
+										<span class="front"><i class="fa fa-file-text-o"></i>告警信息列表</span>
+										<span class="back"><i class="fa fa-file-text-o"></i>告警信息列表</span>
+									</span>
+								</a>
+							</li>
+                
+							<li>
+								<a href="warnhistory.html" class="three-d"><i class="fa fa-history "></i>历史告警信息列表	
+								    <span class="three-d-box">
+										<span class="front"><i class="fa fa-history "></i>历史告警信息列表</span>
+										<span class="back"><i class="fa fa-history "></i>历史告警信息列表</span>
+									</span>
+								</a>
+							</li>
+                 
+							<li>
+								<a href="shield.html" class="three-d"><i class="fa fa-plug"></i>屏蔽告警信息
+									<span class="three-d-box">
+										<span class="front"><i class="fa fa-plug"></i>屏蔽告警信息</span>
+										<span class="back"><i class="fa fa-plug"></i>屏蔽告警信息</span>
+									</span>
+								</a>
+							</li>
+                        </ul>
+					</li>
+				</ul>
+			</li>
+			<li>
+			<a href="chart04.html" class="three-d">
+			<i class="fa fa-bar-chart"></i>服务统计
+			<span class="three-d-box"><span class="front"><i class="fa fa-bar-chart"></i>服务统计</span><span class="back"><i class="fa fa-bar-chart"></i>服务统计</span></span>
+			</a>
+			
+			<ul class="clearfix unstyled drop-menu">
+			
+			            <li>
+				      	<a href="chart04.html" class="three-d">
+					        <i class="fa fa-bar-chart"></i>访问统计
+							<span class="three-d-box"><span class="front"><i class="fa fa-bar-chart"></i>访问统计</span><span class="back"><i class="fa fa-bar-chart"></i>访问统计</span></span>
+					    </a>
+					    
+					    <ul class="secondul">
+			                  <li>
+			                  <a href="chart04.html" class="three-d"><i class="fa fa-line-chart"></i>年访问频次统计
+			                  <span class="three-d-box"><span class="front"><i class="fa fa-line-chart"></i>年访问频次统计</span><span class="back"><i class="fa fa-line-chart"></i>年访问频次统计</span></span>
+			                  </a>
+			                  </li>
+			                  
+			                  <li>
+			                  <a href="chart05.html" class="three-d"><i class="fa fa-line-chart"></i>年总命中率统计
+			                  <span class="three-d-box"><span class="front"><i class="fa fa-line-chart"></i>年总命中率统计</span><span class="back"><i class="fa fa-line-chart"></i>年总命中率统计</span></span>
+			                  </a>
+			                  </li>
+			                  
+			                  <li>
+			                  <a href="chart06.html" class="three-d"><i class="fa fa-line-chart"></i>网站访问频次对比统计
+			                  <span class="three-d-box"><span class="front"><i class="fa fa-line-chart"></i>网站访问频次对比统计</span><span class="back"><i class="fa fa-line-chart"></i>网站访问频次对比统计</span></span>
+			                  </a>
+			                  </li>
+			                  
+			                  
+			              </ul>
+						</li>
+						
+						<li>
+						<a href="chart02.html" class="three-d">
+							<i class="fa fa-pie-chart"></i>热度统计
+							<span class="three-d-box"><span class="front"><i class="fa fa-pie-chart"></i>热度统计</span><span class="back"><i class="fa fa-pie-chart"></i>热度统计</span></span>
+						</a>
+						
+						<ul class="secondul">
+			                  <li>
+			                  <a href="chart02.html" class="three-d"><i class="fa fa-line-chart"></i>访问频次热度统计
+			                  <span class="three-d-box"><span class="front"><i class="fa fa-line-chart"></i>访问频次热度统计</span><span class="back"><i class="fa fa-line-chart"></i>访问频次热度统计</span></span>
+			                  </a>
+			                  </li>
+			                  
+			                  <li>
+			                  <a href="chart01.html" class="three-d"><i class="fa fa-line-chart"></i>访问时长热度统计
+			                  <span class="three-d-box"><span class="front"><i class="fa fa-line-chart"></i>访问时长热度统计</span><span class="back"><i class="fa fa-line-chart"></i>访问时长热度统计</span></span>
+			                  </a>
+			                  </li>
+			                  
+			                  <li>
+			                  <a href="chart03.html" class="three-d"><i class="fa fa-line-chart"></i>访问热度变化统计
+			                  <span class="three-d-box"><span class="front"><i class="fa fa-line-chart"></i>访问热度变化统计</span><span class="back"><i class="fa fa-line-chart"></i>访问热度变化统计</span></span>
+			                  </a>
+			                  </li>
+			                  
+			              </ul>
+						</li>
+						
+						
+						<li>
+						<a href="chart07.html" class="three-d">
+							<i class="fa fa-bar-chart"></i>业务统计
+							<span class="three-d-box"><span class="front"><i class="fa fa-bar-chart"></i>业务统计</span><span class="back"><i class="fa fa-bar-chart"></i>业务统计</span></span>
+						</a>
+						<ul class="secondul">
+			                  <li>
+			                  <a href="chart07.html" class="three-d"><i class="fa fa-line-chart"></i>各节点用户请求统计
+			                  <span class="three-d-box"><span class="front"><i class="fa fa-line-chart"></i>各节点用户请求统计</span><span class="back"><i class="fa fa-line-chart"></i>各节点用户请求统计</span></span>
+			                  </a>
+			                  </li>
+			                  
+			                  <li>
+			                  <a href="chart08.html" class="three-d"><i class="fa fa-line-chart"></i>各节点流量统计
+			                  <span class="three-d-box"><span class="front"><i class="fa fa-line-chart"></i>各节点流量统计</span><span class="back"><i class="fa fa-line-chart"></i>各节点流量统计</span></span>
+			                  </a>
+			                  </li>
+			                  
+			                  <li>
+			                  <a href="chart09.html" class="three-d"><i class="fa fa-line-chart"></i>各节点命中率统计
+			                  <span class="three-d-box"><span class="front"><i class="fa fa-line-chart"></i>各节点命中率统计</span><span class="back"><i class="fa fa-line-chart"></i>各节点命中率统计</span></span>
+			                  </a>
+			                  </li>
+			                  
+			                  <li>
+			                  <a href="chart10.html" class="three-d"><i class="fa fa-line-chart"></i>各节点服务成功率统计
+			                  <span class="three-d-box"><span class="front"><i class="fa fa-line-chart"></i>各节点服务成功率统计</span><span class="back"><i class="fa fa-line-chart"></i>各节点服务成功率统计</span></span>
+			                  </a>
+			                  </li>
+			              </ul>
+						</li>
+						
+						<li>
+						<a href="chart11.html" class="three-d">
+							<i class="fa fa-pie-chart"></i>并发统计
+							<span class="three-d-box"><span class="front"><i class="fa fa-pie-chart"></i>并发统计</span><span class="back"><i class="fa fa-pie-chart"></i>并发统计</span></span>
+						</a>
+						<ul class="secondul">
+			                  <li>
+			                  <a href="chart11.html" class="three-d"><i class="fa fa-line-chart"></i>历史并发统计
+			                  <span class="three-d-box"><span class="front"><i class="fa fa-line-chart"></i>历史并发统计</span><span class="back"><i class="fa fa-line-chart"></i>历史并发统计</span></span>
+			                  </a>
+			                  </li>
+			                  
+			                  <li>
+			                  <a href="chart12.html" class="three-d"><i class="fa fa-line-chart"></i>调度并发对比统计
+			                  <span class="three-d-box"><span class="front"><i class="fa fa-line-chart"></i>调度并发对比统计</span><span class="back"><i class="fa fa-line-chart"></i>调度并发对比统计</span></span>
+			                  </a>
+			                  </li>
+			                  
+			                  <li>
+			                  <a href="chart13.html" class="three-d"><i class="fa fa-line-chart"></i>并发数统计
+			                  <span class="three-d-box"><span class="front"><i class="fa fa-line-chart"></i>并发数统计</span><span class="back"><i class="fa fa-line-chart"></i>并发数统计</span></span>
+			                  </a>
+			                  </li>
+			                  
+			              </ul>
+						</li>
+				</ul>
+			</li>
+			
+			<li>
+		    	<a href="userlist.html" class="three-d"><i class="fa fa-shield"></i>安全管理
+			    <span class="three-d-box"><span class="front"><i class="fa fa-shield"></i>安全管理</span><span class="back"><i class="fa fa-shield"></i>安全管理</span></span></a>
+			<ul class="clearfix unstyled drop-menu">
+			
+			            <li>
+						<a href="userlist.html" class="three-d">
+							<i class="fa fa-users"></i>用户管理
+							<span class="three-d-box"><span class="front"><i class="fa fa-users"></i>用户管理</span><span class="back"><i class="fa fa-users"></i>用户管理</span></span>
+						</a>
+						<ul class="secondul">
+			                  <li>
+			                  <a href="userlist.html" class="three-d"><i class="fa fa-list-ul"></i>用户列表
+			                  <span class="three-d-box"><span class="front"><i class="fa fa-list-ul"></i>用户列表</span><span class="back"><i class="fa fa-list-ul"></i>用户列表</span></span>
+			                  </a>
+			                  </li>
+			                  
+			                  <li>
+			                  <a href="useradd.html" class="three-d"><i class="fa fa-plus-square-o"></i>新建用户
+			                  <span class="three-d-box"><span class="front"><i class="fa fa-plus-square-o"></i>新建用户</span><span class="back"><i class="fa fa-plus-square-o"></i>新建用户</span></span>
+			                  </a>
+			                  </li>
+			               </ul>
+						</li>
+						
+						<li>
+						<a href="rolelist.html" class="three-d">
+						    <i class="fa fa-user"></i>角色管理
+							<span class="three-d-box"><span class="front"><i class="fa fa-user"></i>角色管理</span><span class="back"><i class="fa fa-user"></i>角色管理</span></span>
+						</a>
+						<ul class="secondul">
+			                  <li>
+			                  <a href="rolelist.html" class="three-d"><i class="fa fa-outdent"></i>角色列表
+			                  <span class="three-d-box"><span class="front"><i class="fa fa-outdent"></i>角色列表</span><span class="back"><i class="fa fa-outdent"></i>角色列表</span></span>
+			                  </a>
+			                  </li>
+			                  
+			                  <li>
+			                  <a href="roleadd.html" class="three-d"><i class="fa fa-plus-square-o"></i>新建角色
+			                  <span class="three-d-box"><span class="front"><i class="fa fa-plus-square-o"></i>新建角色</span><span class="back"><i class="fa fa-plus-square-o"></i>新建角色</span></span>
+			                  </a>
+			                  </li>
+			                </ul>
+						</li>
+						
+						
+						<li>
+						<a href="assurancelist.html" class="three-d">
+							<i class="fa fa-gears"></i>认证管理
+							<span class="three-d-box"><span class="front"><i class="fa fa-gears"></i>认证管理</span><span class="back"><i class="fa fa-gears"></i>认证管理</span></span>
+						</a>
+						</li>
+						
+						<li>
+						<a href="log_management.html" class="three-d">
+							<i class="fa fa-list-alt"></i>日志管理
+							<span class="three-d-box"><span class="front"><i class="fa fa-list-alt"></i>日志管理</span><span class="back"><i class="fa fa-list-alt"></i>日志管理</span></span>
+						</a></li>
+				</ul>
+			</li>
+			
+		</ul>
+	</div>
+</section>
+</div>
+
+<!--自定义添加面包屑导航-->
+<div id="breadcrumbs">
+你当前所在的位置：<a href="index.html">首页</a>> <a href="gplotset.html"> 网络管理</a> > <a href="hd-cdmagps.html">拓扑管理</a>
+</div>
+<!--自定义面包屑导航结束-->
+<div class='content'>
+
+ <div class="navbox">
+  <nav>
+		<ul class="mcd-menu">
+			<li><a href="gplotset.html"><i class="fa fa-globe"></i><strong>网络管理</strong></a></li>
+			<li><a  href="gplotset.html" class="active"><i class="fa fa-sitemap"></i>拓扑管理</a></li>
+			<li><a href="hd-cdmagps.html"><i class="fa fa-retweet"></i>调度管理</a></li>
+		    <li><a href="warnninglist.html"><i class="fa fa-support"></i>性能管理</a>
+			    <ul>
+                    <li><a href="warnninglist.html"><i class="fa fa-file-text-o"></i>性能阀值信息列表</a></li>
+			    	<li><a href="setwarn.html"><i class="fa fa-sort-numeric-asc"></i>性能阀值设置</a></li>
+			        <li><a href="real-time.html"><i class="fa fa-area-chart"></i>实时性能监控</a></li>
+			      	<li><a href="fresh-diagnose.html"><i class="fa fa-ioxhost"></i>性能分析管理</a></li>
+			      	<li><a href="task-diagnose.html"><i class="fa fa-file-text-o"></i>测量任务下发列表</a></li>
+			      	<li><a href="task.html"><i class="fa fa-plus-square-o"></i>新建测量任务</a></li>
+			    </ul>
+			</li>
+			<li><a href="warnlist.html"><i class="fa fa-warning"></i>告警管理</a>
+            	<ul>
+            	    <li><a href="warnlist.html"><i class="fa fa-file-text-o"></i>告警信息列表</a></li>
+                    <li><a href="warnhistory.html"><i class="fa fa-history "></i>历史告警信息列表</a></li>
+				    <li><a href="shield.html"><i class="fa fa-plug"></i>屏蔽阀值列表</a></li>
+                </ul>
+           </li>
+	    </ul>
+	</nav>
+</div>
+
+<div class="tablelist">
+
+   <div class="canvasDivbox">
+   	<div id="canvasDiv">
+		<canvas id="cvs1" width="800" height="600"></canvas>
+		<canvas id="cvs2" width="800" height="600"></canvas>
+		<canvas id="cvs3" width="800" height="600"></canvas>
+	</div>
+	</div>
+	<div id="buttons" class="chioceresearch">
+		<button type="button" onclick="load()" class="btn btn-7 bsh">重新载入拓扑图</button>
+		<button type="button" onclick="edit()" class="btn btn-7 bsh">编辑模式</button>
+		<button type="button" onclick="closeEdit()" class="btn btn-7 bsh">关闭编辑模式</button>
+		<button type="button" onclick="associated()" class="btn btn-7 bsh">关联节点</button>
+		<button type="button" onclick="save()" class="btn btn-7 bsh">保存</button>
+	
+	</div>
+	
+	
+
+	</div>
+</body>
+<script>
+	var serverImg=new Image(),pcImg=new Image(),routerImg=new Image(),topImg=new Image(),top_focusImg=new Image(),router_focusImg=new Image(),server_focusImg=new Image(),pc_focusImg=new Image();
+	serverImg.src="img/server.png";
+	pcImg.src="img/pc.png";
+	routerImg.src="img/router.png";
+	topImg.src="img/top.png";
+	top_focusImg.src="img/top_focus.png";
+	router_focusImg.src="img/router_focus.png";
+	pc_focusImg.src="img/pc_focus.png";
+	server_focusImg.src="img/server_focus.png";
+	var nodeArray=new Array();
+	var tempId=0;
+	var editInfo={
+		focusFlag:false,
+		modelFlag:false, //是否进入了编辑模式
+		flag:false,   //是否点击了节点
+		templateFlag:false, //是否点击了模板节点
+		tempType:null, //新节点类型
+		templateWidth:70,
+		id:tempId,
+		getId:function (){
+			editInfo.id++;
+			return editInfo.id;
+		}
+	};
+	var showInfo={
+		focusFlag:false,
+		mouseDownFlag:false,
+		layer:1,
+		parentId:0,
+		imgWidthForLayer:{'layer1':100,'layer2':100,'layer3':100,'layer4':100},
+		imgWidth:function(){
+			var key="layer"+showInfo.layer;
+			return showInfo.imgWidthForLayer[key];
+		}
+	};
+	var cvs1=document.getElementById("cvs1");
+	var ctx1=cvs1.getContext("2d");
+	var cvs3=document.getElementById("cvs3");
+	var ctx3=cvs3.getContext("2d");
+	//编辑模式
+	function edit(){
+		if(!editInfo.modelFlag){
+			$("#cvs1").css("display","none");
+			$("#cvs3").css("display","");
+			editInfo.editModelArray=[];
+			if(nodeArray.length>0){
+				for(var i=0;i<nodeArray.length;i++){
+					editInfo.editModelArray.push(nodeArray[i]);
+				}
+			}
+			var spacing=80;
+			/*editInfo.editModelArray.push({templateFlag:true,x:showInfo.imgWidth(),y:25,type:"server",name:"server"});
+			editInfo.editModelArray.push({templateFlag:true,x:showInfo.imgWidth()+spacing,y:25,type:"pc",name:"pc"});
+			editInfo.editModelArray.push({templateFlag:true,x:showInfo.imgWidth()+spacing*2,y:25,type:"router",name:"router"});
+			editInfo.editModelArray.push({templateFlag:true,x:showInfo.imgWidth()+spacing*3,y:25,type:"top",name:"top"});
+			*/
+			if(showInfo.layer==1){
+				editInfo.editModelArray.push({templateFlag:true,x:showInfo.imgWidth(),y:25,type:"top",name:"top"});
+			}else{
+				editInfo.editModelArray.push({templateFlag:true,x:showInfo.imgWidth(),y:25,type:"server",name:"server"});
+				editInfo.editModelArray.push({templateFlag:true,x:showInfo.imgWidth()+spacing,y:25,type:"pc",name:"pc"});
+				editInfo.editModelArray.push({templateFlag:true,x:showInfo.imgWidth()+spacing*2,y:25,type:"router",name:"router"});
+			}
+			cvs3.addEventListener("mousedown",OnMouseDownEdit,false);
+			cvs3.addEventListener("mousemove",OnMouseMoveEdit,false);
+			cvs3.addEventListener("dblclick",OnMouseDBClick,false);
+			document.addEventListener("mouseup",OnMouseUpEdit,false);
+			editInfo.modelFlag=true;
+			drawEdit();
+		}else{
+			alert("已进入编辑模式");
+		}
+	}
+	//关闭编辑模式
+	function closeEdit(){
+		editInfo.modelFlag=false;
+		$("#cvs3").css("display","none");
+		$("#cvs2").css("display","none");
+		$("#cvs1").css("display","");
+		$("#cvs1").css("border-radius","10px");
+		$("#cvs2").css("border-radius","10px");
+		$("#cvs3").css("border-radius","10px");
+		draw();
+		//load();
+	}
+	//绘制编辑区域
+	function drawEdit(){
+		drawLineForEdit();
+		var spacing=80;
+		//cvs3.width=cvs3.width;
+		ctx3.save();
+		ctx3.globalAlpha=0.9;
+		ctx3.strokeStyle="black";
+		ctx3.fillStyle="MidnightBlue";
+		ctx3.fillRect(0,0,800,120);
+		ctx3.restore();
+		for(var i=0;i<editInfo.editModelArray.length;i++){
+			if(showInfo.layer==editInfo.editModelArray[i].layer){
+				if(showInfo.parentId==editInfo.editModelArray[i].parentId){
+					ctx3.drawImage(eval(editInfo.editModelArray[i].type+"Img"),editInfo.editModelArray[i].x,editInfo.editModelArray[i].y,showInfo.imgWidth(),showInfo.imgWidth());
+					ctx3.font = "14px Arial"; 
+					ctx3.fillText(editInfo.editModelArray[i].name,editInfo.editModelArray[i].x,editInfo.editModelArray[i].y+showInfo.imgWidth()+14);
+					//关联模式下的效果
+					if(editInfo.associatedFlag && editInfo.editModelArray[i].id>=0){
+					
+						if(editInfo.associatedStepNo==0){
+							if(editInfo.editModelArray[i].type=="top"){
+								ctx3.save();
+								ctx3.fillStyle="#00FFCC";
+								ctx3.beginPath();
+								ctx3.arc(editInfo.editModelArray[i].x+showInfo.imgWidth()/2,editInfo.editModelArray[i].y+showInfo.imgWidth()/2,3,0,Math.PI*2,true);
+								ctx3.closePath();
+								ctx3.fill();
+								ctx3.restore();
+							}
+								
+							
+						}else if(editInfo.associatedStepNo==1){
+								
+									ctx3.save();
+									ctx3.fillStyle="#00FFCC";
+									ctx3.beginPath();
+									ctx3.arc(editInfo.editModelArray[i].x+showInfo.imgWidth()/2,editInfo.editModelArray[i].y+showInfo.imgWidth()/2,3,0,Math.PI*2,true);
+									ctx3.closePath();
+									ctx3.fill();
+									ctx3.restore();
+								
+						}
+						
+					}
+				}
+			}else if(editInfo.editModelArray[i].templateFlag){
+				ctx3.save();
+				ctx3.globalAlpha=0.9;
+				ctx3.drawImage(eval(editInfo.editModelArray[i].type+"Img"),editInfo.editModelArray[i].x,editInfo.editModelArray[i].y,editInfo.templateWidth,editInfo.templateWidth);
+				ctx3.font = "14px Arial";
+				ctx3.fillStyle="#fff"; 
+				ctx3.fillText(editInfo.editModelArray[i].name,editInfo.editModelArray[i].x,editInfo.editModelArray[i].y+editInfo.templateWidth+14);
+				ctx3.restore();
+			}
+		}
+	}
+	//监听编辑模式鼠标点击
+	function OnMouseDownEdit(event){
+		var mouseX=event.layerX;
+		var mouseY=event.layerY;
+		for(var i=0;i<editInfo.editModelArray.length;i++){
+			if(!editInfo.editModelArray[i].templateFlag && mouseX>editInfo.editModelArray[i].x && mouseX<editInfo.editModelArray[i].x+showInfo.imgWidth() && mouseY>editInfo.editModelArray[i].y && mouseY<editInfo.editModelArray[i].y+showInfo.imgWidth()){
+					//console.info("1");
+					editInfo.tempX=editInfo.editModelArray[i].x-mouseX;
+					editInfo.tempY=editInfo.editModelArray[i].y-mouseY;
+					editInfo.mouseDownIndex=i;
+					editInfo.flag=true;
+					break;
+			}
+			if(editInfo.editModelArray[i].templateFlag && mouseX>editInfo.editModelArray[i].x && mouseX<editInfo.editModelArray[i].x+editInfo.templateWidth && mouseY>editInfo.editModelArray[i].y && mouseY<editInfo.editModelArray[i].y+editInfo.templateWidth){
+					//console.info("2");
+					editInfo.tempX=editInfo.editModelArray[i].x-mouseX;
+					editInfo.tempY=editInfo.editModelArray[i].y-mouseY;	//editInfo.editModelArray.push({'layer':showInfo.layer,'parentId':showInfo.parentId,'x':mouseX+editInfo.tempX,'y':mouseY+editInfo.tempY,type:editInfo.editModelArray[i].type});
+					//editInfo.mouseDownIndex=editInfo.editModelArray.length-1;
+					//editInfo.flag=true;
+					editInfo.templateFlag=true;
+					editInfo.tempType=editInfo.editModelArray[i].type;
+					break;
+			}
+		}
+	}
+	//监听编辑模式鼠标移动
+	function OnMouseMoveEdit(event){
+		if(editInfo.flag){
+			var x=event.layerX+editInfo.tempX;
+			var y=event.layerY+editInfo.tempY;
+			editInfo.editModelArray[editInfo.mouseDownIndex].x=x;
+			editInfo.editModelArray[editInfo.mouseDownIndex].y=y;
+			drawEdit();
+		}
+		//console.info(editInfo.modelFlag+","+!editInfo.flag);
+		//移动到模板节点上，模板节点改变显示样式
+		if(editInfo.modelFlag && !editInfo.flag){
+			var mouseX=event.layerX;
+			var mouseY=event.layerY;
+			for(var i=0;i<editInfo.editModelArray.length;i++){
+				if(editInfo.editModelArray[i].templateFlag){
+					console.info(mouseX>editInfo.editModelArray[i].x && mouseX<editInfo.editModelArray[i].x+editInfo.templateWidth && mouseY>editInfo.editModelArray[i].y && mouseY<editInfo.editModelArray[i].y+editInfo.templateWidth);
+					if(mouseX>editInfo.editModelArray[i].x && mouseX<editInfo.editModelArray[i].x+editInfo.templateWidth && mouseY>editInfo.editModelArray[i].y && mouseY<editInfo.editModelArray[i].y+editInfo.templateWidth){
+						console.info("111");
+						ctx3.save();
+						ctx3.globalAlpha=1;
+						ctx3.drawImage(eval(editInfo.editModelArray[i].type+"Img"),editInfo.editModelArray[i].x,editInfo.editModelArray[i].y,editInfo.templateWidth,editInfo.templateWidth);
+						ctx3.restore();
+						break;
+					}else{
+						drawEdit();
+					}
+				}
+			}
+		}
+		
+		//移出模板节点范围 才添加节点
+		if(editInfo.templateFlag){
+			var mouseX=event.layerX;
+			var mouseY=event.layerY;
+			var flag=true;
+			for(var i=0;i<editInfo.editModelArray.length;i++){
+				if(editInfo.editModelArray[i].templateFlag){
+					if(mouseX>editInfo.editModelArray[i].x && mouseX<editInfo.editModelArray[i].x+				editInfo.templateWidth && mouseY>editInfo.editModelArray[i].y && mouseY<editInfo.editModelArray[i].y+editInfo.templateWidth){
+						flag=false;
+					}
+				}
+			}
+			if(flag){
+				var tempId=editInfo.getId();
+				editInfo.editModelArray.push({'id':tempId,'layer':showInfo.layer,'parentId':showInfo.parentId,'x':mouseX+editInfo.tempX,'y':mouseY+editInfo.tempY,type:editInfo.tempType});
+				
+				editInfo.mouseDownIndex=editInfo.editModelArray.length-1;
+				editInfo.templateFlag=false;
+				editInfo.flag=true;
+				if(editInfo.tempType=="top"){
+					editInfo.editModelArray.push({'id':editInfo.getId(),'layer':showInfo.layer+1,'parentId':tempId,'x':320,'y':200,type:editInfo.tempType});
+				}
+			}
+		}
+		
+		
+	}
+	//监听编辑模式鼠标单击释放
+	function OnMouseUpEdit(){
+		editInfo.flag=false;
+		editInfo.templateFlag=false;
+	}
+	//监听编辑模式鼠标双击事件(设置节点属性)
+	function OnMouseDBClick(event){
+		
+		var mouseX=event.layerX;
+		var mouseY=event.layerY;
+		for(var i=0;i<editInfo.editModelArray.length;i++){
+			if(editInfo.editModelArray[i].layer==showInfo.layer && editInfo.editModelArray[i].parentId==showInfo.parentId && mouseX>editInfo.editModelArray[i].x && mouseX<editInfo.editModelArray[i].x+showInfo.imgWidth() && mouseY>editInfo.editModelArray[i].y && mouseY<editInfo.editModelArray[i].y+showInfo.imgWidth()){
+				if(editInfo.editModelArray[i].type=="top"){
+					$("#infoInsert").remove();
+					editInfo.mouseDownIndex=i;
+					$("#canvasDiv").append("<div id='infoInsert' style='left:"+mouseX+"px;top:"+mouseY+"px;'><span>节点录入</span><label>节点名称:</label><input value='"+editInfo.editModelArray[i].name+"' name='name' type='text'/></br><label>父节点:</label><select><option value='guojiazhongxin'>国家中心</option><option value='beijing'>北京</option><option value='jiangsu'>江苏</option><option value='guangdong'>广东</option><option value='hubei'>湖北</option></select></br><label>节点描述:</label><textarea rows='5'  value='"+editInfo.editModelArray[i].info+"' type='text' name='info'></textarea></br><div class='circuitsallbox'><label>节点线路:</label><div class='circuitsbox'><i class='fa fa-plus' title='添加线路类型'></i><i class='fa fa-minus' title='删除线路类型'></i><i class='fa fa-check-circle'></i><label>线路类型:</label><select><option value='guojiazhongxin'>电信</option><option value='beijing'>移动</option><option value='jiangsu'>联通</option></select></br><label>IP:</label><input value='' type='text'/></br><label>Port:</label><input value='' type='text'/></div></div><div class='fullline'><button type='button' onclick='saveThis(this)' class='btn btn-7 bsh'>确定</button><button type='button' onclick='cancle(this)' class='btn btn-7 bsh'>取消</button><button type='button' onclick='delThis()' class='btn btn-7 bsh'>删除该节点</button></div></div>");
+				
+					var circuitsbox=$(".circuitsbox").html();
+					var circuitsboxlength=$(".circuitsbox").length;
+	                $(".circuitsallbox .fa-plus").click(function(){
+	                   $(this).parent().clone(true).appendTo($(".circuitsallbox"));
+	                   circuitsboxlength += 1;
+                    })
+                     
+                    
+                     $(".circuitsbox .fa-minus").click(function(){
+                     
+                     if(circuitsboxlength > 1){
+                   
+	                   $(this).parent().remove();
+	                   circuitsboxlength -= 1;
+                     }else{
+                       return false;
+                     }
+                     
+	                   })
+                    
+				}else{
+					$("#infoInsert").remove();
+					editInfo.mouseDownIndex=i;
+					$("#canvasDiv").append("<div id='infoInsert' style='left:"+mouseX+"px;top:"+mouseY+"px;'><span>设备录入</span><label>设备名称:</label><input name='name' value='"+editInfo.editModelArray[i].name+"' type='text'/></br><label>设备类型:</label><input DISABLED value='"+editInfo.editModelArray[i].type+"' type='text'/></br><label>设备描述:</label><input value='"+editInfo.editModelArray[i].info+"' name='info' type='text'/></br><div class='fullline'><button type='button' onclick='saveThis(this)' class='btn btn-7 bsh'>确定</button><button type='button' onclick='cancle(this)' class='btn btn-7 bsh'>取消</button><button type='button' onclick='delThis()' class='btn btn-7 bsh'>删除该设备</button></div></div>");
+				
+				}
+				
+			}
+		}
+		clearSelection();
+	}
+	
+
+
+    
+    
+	function delThis(){
+		for(var i=0;i<editInfo.editModelArray.length;i++){
+			if(editInfo.editModelArray[i].link){
+				for(var j=0;j<editInfo.editModelArray[i].link.length;j++){
+					if(editInfo.editModelArray[i].link[j]==editInfo.editModelArray[editInfo.mouseDownIndex].id){
+						editInfo.editModelArray[i].link.splice(j,1);
+					}
+				}
+			}
+		}
+		editInfo.editModelArray.splice(editInfo.mouseDownIndex,1);
+		drawEdit();
+		$("#infoInsert").remove();
+	}
+	
+	//保存节点info
+	function saveThis(obj){
+		var name=$("#infoInsert").find("input[name='name']").val();
+		var info=$("#infoInsert").find("input[name='info']").val();
+		//alert("id"+id+",name"+name);
+		//editInfo.editModelArray[editInfo.mouseDownIndex].id=id;
+		editInfo.editModelArray[editInfo.mouseDownIndex].name=name;
+		editInfo.editModelArray[editInfo.mouseDownIndex].info=info;
+		for(var j=0;j<editInfo.editModelArray.length;j++){
+			if(editInfo.editModelArray[j].parentId==editInfo.editModelArray[editInfo.mouseDownIndex].id){
+				editInfo.editModelArray[j].name=name;
+				editInfo.editModelArray[j].info=info;
+			}
+		}
+		$(obj).parent().parent().remove();
+	}
+	//取消编辑节点
+	function cancle(obj){
+		$(obj).parent().parent().remove();
+	}
+	
+	
+	//禁止双击选中
+	function clearSelection(){
+		if(document.selection && document.selection.empty){
+			document.selection.empty(); 
+		} 
+		else if(window.getSelection) {
+			var selection = window.getSelection(); 
+			selection.removeAllRanges(); 
+		} 
+	} 
+	
+	//关联节点
+	function associated(){
+		cvs3.addEventListener("click",associatedClick,false);
+		editInfo.associatedStepNo=0;
+		editInfo.associatedFlag=true;
+		drawEdit();
+	}
+	//关联节点状态单击事件
+	/**
+	设备关联节点，第一步选择节点，第二步选择设备或节点
+	**/
+	function associatedClick(event){
+			var mouseX=event.layerX;
+			var mouseY=event.layerY;
+			for(var i=0;i<editInfo.editModelArray.length;i++){
+				if(editInfo.editModelArray[i].id>=0 && editInfo.editModelArray[i].parentId==showInfo.parentId && editInfo.editModelArray[i].layer==showInfo.layer && mouseX>editInfo.editModelArray[i].x && mouseX<editInfo.editModelArray[i].x+showInfo.imgWidth() && mouseY>editInfo.editModelArray[i].y && mouseY<editInfo.editModelArray[i].y+showInfo.imgWidth()){
+					if(editInfo.associatedStepNo==0){
+						if(editInfo.editModelArray[i].type=="top"){
+							editInfo.tempAssociatedIndex=i;
+							editInfo.associatedStepNo=1;
+							//标记为父节点
+							break;
+						}
+					}else if(editInfo.associatedStepNo==1){
+						
+							if(editInfo.editModelArray[editInfo.tempAssociatedIndex].link){
+						
+							}else{
+								editInfo.editModelArray[editInfo.tempAssociatedIndex].link=[];
+							}
+							editInfo.editModelArray[editInfo.tempAssociatedIndex].link.push(editInfo.editModelArray[i].id);
+							editInfo.associatedStepNo=-1;
+							editInfo.associatedFlag=false;
+							drawEdit();
+							//标记为子节点
+							break;
+						
+					}	
+				}
+			}
+	}
+	
+	//编辑模式绘制连接线
+	function drawLineForEdit(){
+		//cvs3.width=cvs3.width;
+		ctx3.clearRect(0,0,800,600);
+		ctx3.save();
+		for(var i=0;i<editInfo.editModelArray.length;i++){
+			if(editInfo.editModelArray[i].layer==showInfo.layer && editInfo.editModelArray[i].parentId==showInfo.parentId){
+				if(editInfo.editModelArray[i].link){
+					for(var j=0;j<editInfo.editModelArray[i].link.length;j++){
+						for(var k=0;k<editInfo.editModelArray.length;k++){
+							if(editInfo.editModelArray[k].id==editInfo.editModelArray[i].link[j]){
+								
+								ctx3.beginPath();
+								ctx3.strokeStyle="#222";
+								ctx3.lineWidth = 1.0; 
+								ctx3.shadowBlur = 0;
+								ctx3.shadowColor = "#222";
+								ctx3.moveTo(editInfo.editModelArray[i].x+showInfo.imgWidth()/2,editInfo.editModelArray[i].y+showInfo.imgWidth()/2);
+								ctx3.lineTo(editInfo.editModelArray[k].x+showInfo.imgWidth()/2,editInfo.editModelArray[k].y+showInfo.imgWidth()/2);
+								ctx3.closePath();
+								ctx3.stroke();
+								
+							}
+						}
+					}
+				}
+			}
+		}
+		ctx3.restore();
+	}
+	
+	
+	
+	//载入
+	function load(){
+		$("#cvs3").css("display","none");
+		$("#cvs2").css("display","none");
+		$("#layerNo").html("当前层级:"+showInfo.layer+",当前parentId:"+showInfo.parentId);
+		nodeArray=[{"id":1,"layer":1,"parentId":0,"x":337,"y":130,"type":"top","name":"国家中心","info":"国家中心","link":[4,7],"focus":false},{"id":2,"layer":2,"parentId":1,"x":347,"y":124,"type":"top","name":"国家中心","info":"国家中心","focus":false,"link":[19,23,21,22]},{"id":4,"layer":1,"parentId":0,"x":175,"y":323,"type":"top","name":"上海市","info":"上海市","focus":false},{"id":5,"layer":2,"parentId":4,"x":327,"y":165,"type":"top","name":"上海市","info":"上海市","focus":false,"link":[14,13,18,17]},{"id":7,"layer":1,"parentId":0,"x":521,"y":331,"type":"top","name":"江苏省","info":"江苏省","focus":false},{"id":8,"layer":2,"parentId":7,"x":320,"y":200,"type":"top","name":"江苏省","info":"江苏省","focus":false,"link":[12,10,11]},{"id":10,"layer":2,"parentId":7,"x":207,"y":360,"type":"router","name":"缓存服务器","info":"缓存服务器","focus":false},{"id":11,"layer":2,"parentId":7,"x":428,"y":341,"type":"router","name":"缓存服务器","info":"缓存服务器","focus":false},{"id":12,"layer":2,"parentId":7,"x":98,"y":188,"type":"server","name":"负载均衡器","info":"负载均衡器","focus":false},{"id":13,"layer":2,"parentId":4,"x":150,"y":363,"type":"router","name":"缓存服务器","info":"缓存服务器","focus":false},{"id":14,"layer":2,"parentId":4,"x":106,"y":163,"type":"server","name":"负载均衡器","info":"负载均衡器","focus":false},{"id":17,"layer":2,"parentId":4,"x":588,"y":301,"type":"router","name":"缓存服务器","info":"缓存服务器","focus":false},{"id":18,"layer":2,"parentId":4,"x":321,"y":387,"type":"router","name":"缓存服务器","info":"缓存服务器","focus":false},{"id":19,"layer":2,"parentId":1,"x":115,"y":191,"type":"server","name":"负载均衡器","info":"负载均衡器","focus":false},{"id":21,"layer":2,"parentId":1,"x":354,"y":370,"type":"router","name":"缓存服务器","info":"缓存服务器","focus":false},{"id":22,"layer":2,"parentId":1,"x":539,"y":296,"type":"router","name":"缓存服务器","info":"缓存服务器","focus":false},{"id":23,"layer":2,"parentId":1,"x":157,"y":325,"type":"pc","name":"DNS服务器","info":"DNS服务器","focus":false}];
+		draw();
+		$("#cvs1").css("display","");
+		editInfo.id=0;
+		for(var i=0;i<nodeArray.length;i++){
+			if(nodeArray[i].id>editInfo.id){
+				editInfo.id=nodeArray[i].id;
+			}
+		}
+		
+		cvs1.addEventListener("mousedown",cvs1MouseDownListener,false);
+		cvs1.addEventListener("mousemove",cvs1MouseMoveListener,false);
+		cvs1.addEventListener("dblclick",cvs1DblClickListener,false);
+		cvs1.addEventListener("mousewheel",cvs1MouseWheelListener,false);
+		document.addEventListener("mouseup",cvs1MouseUpListener,false);
+	}
+	
+	
+	//cvs1 鼠标滚动事件
+	function  cvs1MouseWheelListener(){
+		//totalVal=0;
+		totalVal=totalVal+event.wheelDelta;
+		$("#scrollListener").val(totalVal);
+		if(totalVal<=-480){
+			for(var i=0;i<nodeArray.length;i++){
+				if(nodeArray[i].id==showInfo.parentId){
+					showInfo.parentId=nodeArray[i].parentId;
+					showInfo.layer-=1;
+					draw();
+					$("#layerNo").html("当前层级:"+showInfo.layer+",当前parentId:"+showInfo.parentId);
+					break;
+				}
+			}
+			totalVal=0;
+		}
+	}
+	
+	
+	//cvs1 鼠标双击事件
+	function cvs1DblClickListener(event){
+		var mouseX=event.layerX;
+		var mouseY=event.layerY;
+		for(var i=0;i<nodeArray.length;i++){
+			if(nodeArray[i].layer==1){
+				if(nodeArray[i].layer==showInfo.layer && nodeArray[i].parentId==showInfo.parentId){
+					if(mouseX>nodeArray[i].x && mouseX<nodeArray[i].x+showInfo.imgWidth() && mouseY>nodeArray[i].y && mouseY<nodeArray[i].y+showInfo.imgWidth()){
+						//增加一个动画效果
+						//区域缩放
+						var int=setInterval(draw1,10);
+						$("body").append("<div id='tempDiv' style='position:absolute;top:0px;left:0px;width:100%;height:100%;' ></div>");
+						setTimeout(function(){
+							clearInterval(int);
+							showInfo.layer+=1;
+							showInfo.parentId=nodeArray[i].id;
+							draw();
+							$("#layerNo").html("当前层级:"+showInfo.layer+",当前parentId:"+showInfo.parentId+",当前父节点名:"+getParentName(nodeArray[i].id));
+							$("#tempDiv").remove();
+							//break;
+						},1000);
+						var x=1,y=1;
+						function draw1(){
+							ctx1.save();
+							x=x+0.05,y=y+0.05;
+							ctx1.scale(x,y);
+							//ctx1.translate((400-nodeArray[i].x)/2,(300-nodeArray[i].y)/2);
+							ctx1.translate(-(nodeArray[i].x+showInfo.imgWidth()/2)*(1-(1/x)),-(nodeArray[i].y+showInfo.imgWidth()/2)*(1-(1/y)));
+							draw();
+							ctx1.restore();
+						//动画效果结束
+						}
+					break;
+					}
+			}
+			
+			}
+			
+			
+		clearSelection();
+		}
+	}
+	
+	//获取当前父节点名
+	function getParentName(parentId){
+		for(var i=0;i<nodeArray.length;i++){
+			if(nodeArray[i].id==parentId){
+				return nodeArray[i].name;
+			}
+		}
+	}
+	
+	//CVS1鼠标按下事件
+	function cvs1MouseDownListener(event){
+		var mouseX=event.layerX;
+		var mouseY=event.layerY;
+		for(var i=0;i<nodeArray.length;i++){
+			if(nodeArray[i].layer==showInfo.layer && nodeArray[i].parentId==showInfo.parentId){
+				if(mouseX>nodeArray[i].x && mouseX<nodeArray[i].x+showInfo.imgWidth() && mouseY>nodeArray[i].y && mouseY<nodeArray[i].y+showInfo.imgWidth()){
+					showInfo.mouseDownIndex=i;
+					showInfo.mouseDownFlag=true;
+					showInfo.tempX=mouseX-nodeArray[i].x;
+					showInfo.tempY=mouseY-nodeArray[i].y;
+				}
+			}
+		}
+	}
+	
+	//cvs1鼠标移动事件
+	function cvs1MouseMoveListener(event){
+		var mouseX=event.layerX;
+		var mouseY=event.layerY;
+		if(showInfo.mouseDownFlag){
+			nodeArray[showInfo.mouseDownIndex].x=mouseX-showInfo.tempX;
+			nodeArray[showInfo.mouseDownIndex].y=mouseY-showInfo.tempY;
+			draw();
+		}else{
+			for(var i=0;i<nodeArray.length;i++){
+				if(nodeArray[i].layer==showInfo.layer && nodeArray[i].parentId==showInfo.parentId && mouseX>nodeArray[i].x && mouseX<nodeArray[i].x+showInfo.imgWidth() && mouseY>nodeArray[i].y && mouseY<nodeArray[i].y+showInfo.imgWidth()){
+					nodeArray[i].focus=true;
+					draw();
+					showInfo.focusFlag=true;
+				}else{
+					nodeArray[i].focus=false;
+					draw();
+					showInfo.focusFlag=false;
+				}
+			}
+		}
+	}
+	
+	//cvs1 鼠标释放事件
+	function cvs1MouseUpListener(){
+		showInfo.mouseDownFlag=false;
+	}
+	//绘制
+	function draw(){
+		drawLine();
+		for(var i=0;i<nodeArray.length;i++){
+			if(showInfo.layer==nodeArray[i].layer && nodeArray[i].parentId==showInfo.parentId){
+				if(nodeArray[i].focus){
+					ctx1.drawImage(eval(nodeArray[i].type+"_focusImg"),nodeArray[i].x,nodeArray[i].y,showInfo.imgWidth(),showInfo.imgWidth());
+				}else{
+					ctx1.drawImage(eval(nodeArray[i].type+"Img"),nodeArray[i].x,nodeArray[i].y,showInfo.imgWidth(),showInfo.imgWidth());
+				}
+				
+				ctx1.font = "14px Arial"; 
+				ctx1.fillText(nodeArray[i].name,nodeArray[i].x,nodeArray[i].y+showInfo.imgWidth()+14);
+			}			
+		}
+		
+	}
+	//绘制连接线
+	function drawLine(){
+		ctx1.clearRect(0,0,800,600);
+		for(var i=0;i<nodeArray.length;i++){
+			if(showInfo.layer==nodeArray[i].layer && showInfo.parentId==nodeArray[i].parentId || nodeArray[i].templateFlag){
+				if(nodeArray[i].link){
+					for(var j=0;j<nodeArray[i].link.length;j++){
+						for(var k=0;k<nodeArray.length;k++){
+							if(nodeArray[k].id==nodeArray[i].link[j]){
+								ctx1.beginPath();
+								ctx1.save();
+								ctx1.lineWidth = 1.0; 
+								ctx1.shadowBlur = 0;
+								ctx1.strokeStyle="#555";
+								ctx1.shadowColor="red";
+								ctx1.shadowBlur=0;
+								ctx1.moveTo(nodeArray[i].x+showInfo.imgWidth()/2,nodeArray[i].y+showInfo.imgWidth()/2);
+								ctx1.lineTo(nodeArray[k].x+showInfo.imgWidth()/2,nodeArray[k].y+showInfo.imgWidth()/2);
+								ctx1.closePath();
+								ctx1.stroke();
+								ctx1.restore();
+							}
+						}
+					}
+				}
+				
+			}
+		}
+	}
+	
+	
+	//测试
+/*	$(function(){
+		cvs3.addEventListener("mousewheel",DOMMouseScrollListener,false);
+		load();
+	})*/
+	window.onload=function(){
+		cvs3.addEventListener("mousewheel",DOMMouseScrollListener,false);
+		load();
+	}
+	var totalVal=0;
+	function DOMMouseScrollListener(event){
+		//alert(1);
+		totalVal=totalVal+event.wheelDelta;
+		$("#scrollListener").val(totalVal);
+		
+	}
+	function save(){
+		alert(1);
+		nodeArray=[];
+		for(var i=0;i<editInfo.editModelArray.length;i++){
+			if(!editInfo.editModelArray[i].templateFlag){
+				nodeArray.push(editInfo.editModelArray[i]);
+			}	
+		}
+	}
+	function alertJson(){
+		$("#jsonDiv").html("JSON为:</br>[</br>");
+		for(var i=0;i<nodeArray.length;i++){
+			delete nodeArray[i].focus;
+			if(i==nodeArray.length-1){
+				$("#jsonDiv").append(JSON.stringify(nodeArray[i])+"</br>");
+			}else{
+				$("#jsonDiv").append(JSON.stringify(nodeArray[i])+",</br>");
+			}
+		}
+		$("#jsonDiv").append("]");
+	}
+	
+	
+    
+</script>
+
+</div>
+</div>
+</body>
+</html>

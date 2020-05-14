@@ -1,0 +1,791 @@
+﻿<!DOCTYPE html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></meta>
+<title>性能分析</title>
+
+
+<link href='css/jquery.gridly.css' rel='stylesheet' type='text/css'>
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+<link href='css/sample.css' rel='stylesheet' type='text/css'>
+<link href='css/identification.css' rel='stylesheet' type='text/css'>
+<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="css/default.css" />
+<link rel="stylesheet" type="text/css" href="css/component.css" />
+<link rel="stylesheet" type="text/css" href="css/pageSlider.css" />
+<link rel="stylesheet" href="css/normalize.css">
+<link href="css/mains.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="css/tree.css" />
+<link rel="stylesheet" href="css/jquery-labelauty.css">
+<link media="screen" rel="stylesheet" href="css/demo.css"/>
+<link media="screen" rel="stylesheet" href="css/taks.css"/>
+<link rel="stylesheet" type="text/css" href="css/base.css" media="all" />
+<link rel="stylesheet" href="css/stylls.css" type="text/css">
+<link rel="stylesheet" type="text/css" href="map/css/sidebar.css" />
+
+
+
+<script src="js/jest.js" type='text/javascript'></script>
+<script src="js/jquery.selectlayer.js"type='text/javascript'></script> 
+<script src="js/jquery-1.7.1.mins.js" type="text/javascript"></script>
+<script src="js/chart/highcharts.js" type="text/javascript"></script>
+<script src="js/chart/gray.js" type="text/javascript"></script>
+<script src="js/chart/grid.js" type="text/javascript"></script>
+<script src="js/chart/dark-green.js" type="text/javascript"></script>
+<script src="js/chart/dark-blue05.js" type="text/javascript"></script>
+<script src="js/chart/fresh-diagnose.js" type="text/javascript"></script>
+
+<script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
+
+
+
+
+
+
+<script>
+
+jQuery(document).ready(function(){
+	var qcloud={};
+	$('[_t_nav]').hover(function(){
+		var _nav = $(this).attr('_t_nav');
+		clearTimeout( qcloud[ _nav + '_timer' ] );
+		qcloud[ _nav + '_timer' ] = setTimeout(function(){
+		$('[_t_nav]').each(function(){
+		$(this)[ _nav == $(this).attr('_t_nav') ? 'addClass':'removeClass' ]('nav-up-selected');
+		});
+		$('#'+_nav).stop(true,true).slideDown(200);
+		}, 150);
+	},function(){
+		var _nav = $(this).attr('_t_nav');
+		clearTimeout( qcloud[ _nav + '_timer' ] );
+		qcloud[ _nav + '_timer' ] = setTimeout(function(){
+		$('[_t_nav]').removeClass('nav-up-selected');
+		$('#'+_nav).stop(true,true).slideUp(200);
+		}, 150);
+	});
+});
+	$("#valid").click(function(){
+		$("#casdes").show();
+	
+	});
+$(document).ready(function(){
+	var QS_city=new Array() 
+	OpenCategoryLayer(
+		"#district_cn",
+		"#sel_district",
+		"#district_cn",
+		"#citycategory",
+		QS_city,
+	14);
+});
+$(document).ready(function(){
+	var QS_city=new Array() 
+	OpenCategoryLayer(
+		"#district_cdn",
+		"#choice_district",
+		"#district_cnes",
+		"#citycategorys",
+		QS_city,
+	14);
+});
+function setChange() 
+{ 
+
+if (document.f.selfs.value == "2") 
+{ 
+document.all.li2.style.display = "block"; 
+} 
+else 
+{ 
+document.all.tb2.style.display = "none"; 
+} 
+} 
+ </script>
+ 
+</head>
+<body>
+<div class="logBox">
+		<div class="login"><strong> CDN管理员，欢迎您 </strong>
+		    <div class="siderNav"><a href="#">自定义桌面</a> | <a href="#">设置</a></div>
+    	</div>
+	</div>
+    <div class="topnav">
+<section class="demo">
+	<div id="nav">
+		<ul class="nav-menu clearfix unstyled">
+	    	<li class="logolist"><img src="img/logo.png"/></li>
+			<li class="homelist"><a href="index.html" class="three-d active"><i class="fa fa-home"></i>首页<span class="three-d-box"><span class="front"><i class="fa fa-home"></i>首页</span><span class="back"><i class="fa fa-home"></i>首页</span></span></a></li>
+		
+			<li>
+			<a href="inpouring.html" class="three-d"><i class="fa fa-tasks"></i>业务管理<span class="three-d-box"><span class="front"><i class="fa fa-tasks"></i>业务管理</span><span class="back"><i class="fa fa-tasks"></i>业务管理</span></span></a>
+			<ul class="clearfix unstyled drop-menu">
+			
+			            <li>
+						<a href="inpouring.html" class="three-d">
+							<i class="fa fa-sort-amount-desc"></i>内容注入
+							<span class="three-d-box"><span class="front"><i class="fa fa-sort-amount-desc"></i>内容注入</span><span class="back"><i class="fa fa-sort-amount-desc"></i>内容注入</span></span>
+						</a>
+						</li>
+						
+						<li>
+						<a href="dissemination.html" class="three-d">
+							<i class="fa fa-share-alt"></i>内容分发
+							<span class="three-d-box"><span class="front"><i class="fa fa-share-alt"></i>内容分发</span><span class="back"><i class="fa fa-share-alt"></i>内容分发</span></span>
+						</a>
+						</li>
+						
+						
+						<li>
+						<a href="content-management.html" class="three-d">
+							<i class="fa fa-navicon"></i>内容管理
+							<span class="three-d-box"><span class="front"><i class="fa fa-navicon"></i>内容管理</span><span class="back"><i class="fa fa-navicon"></i>内容管理</span></span>
+						</a>
+						
+				          	<ul class="secondul">
+			                  <li>
+			                  <a href="content-management.html" class="three-d"><i class="fa fa-file-text-o"></i>资源目录分布列表
+			                  <span class="three-d-box"><span class="front"><i class="fa fa-file-text-o"></i>资源目录分布列表</span><span class="back"><i class="fa fa-file-text-o"></i>资源目录分布列表</span></span>
+			                  </a>
+			                  </li>
+			                  
+			                  <li>
+			                  <a href="resources-push.html" class="three-d"><i class="fa fa-sitemap"></i>资源推送
+			                  <span class="three-d-box"><span class="front"><i class="fa fa-sitemap"></i>资源推送</span><span class="back"><i class="fa fa-sitemap"></i>资源推送</span></span>
+			                  </a>
+			                  </li>
+			                </ul>
+			                
+						</li>
+						
+						<li>
+						<a href="caching.html" class="three-d">
+							<i class="fa fa-exchange"></i>内容缓存
+							<span class="three-d-box"><span class="front"><i class="fa fa-exchange"></i>内容缓存</span><span class="back"><i class="fa fa-exchange"></i>内容缓存</span></span>
+						</a></li>
+						
+				</ul>
+			</li>
+		    <li>
+			<a href="gplotset.html" class="three-d"><i class="fa fa-globe"></i>网络管理<span class="three-d-box"><span class="front"><i class="fa fa-globe"></i>网络管理</span><span class="back"><i class="fa fa-globe"></i>网络管理</span></span></a>
+			<ul class="clearfix unstyled drop-menu">
+			
+			 <li>
+					<a href="gplotset.html" class="three-d"><i class="fa fa-sitemap"></i>拓扑管理
+						<span class="three-d-box">
+							<span class="front"><i class="fa fa-sitemap"></i>拓扑管理</span>
+							<span class="back"><i class="fa fa-sitemap"></i>拓扑管理</span>
+						</span>
+					</a>
+				</li>
+						
+				<li>
+					<a href="hd-cdmagps.html" class="three-d"><i class="fa fa-retweet"></i>调度管理
+						<span class="three-d-box">
+							<span class="front"><i class="fa fa-retweet"></i>调度管理</span>
+							<span class="back"><i class="fa fa-retweet"></i>调度管理</span>
+						</span>
+					</a>
+				</li>
+						
+				<li>
+					<a href="warnninglist.html" class="three-d"><i class="fa fa-support"></i>性能管理
+							<span class="three-d-box">
+								<span class="front"><i class="fa fa-support"></i>性能管理</span>
+								<span class="back"><i class="fa fa-support"></i>性能管理</span>
+							</span>
+					</a>
+						<ul class="secondul">
+                             <li>
+								 <a href="warnninglist.html" class="three-d"><i class="fa fa-file-text-o"></i>性能阀值信息列表 
+									<span class="three-d-box">
+										<span class="front"><i class="fa fa-file-text-o"></i>性能阀值信息列表</span>
+										<span class="back"><i class="fa fa-file-text-o"></i>性能阀值信息列表</span>
+									</span>
+								 </a>
+							</li>
+			                <li>
+								<a href="setwarn.html" class="three-d"><i class="fa fa-sort-numeric-asc"></i>性能阀值设置
+									<span class="three-d-box">
+									   <span class="front"><i class="fa fa-sort-numeric-asc"></i>性能阀值设置</span>
+									   <span class="back"><i class="fa fa-sort-numeric-asc"></i>性能阀值设置</span>
+									</span>
+								</a>
+			                </li>
+			                  
+			                <li>
+								<a href="real-time.html" class="three-d"><i class="fa fa-area-chart"></i>实时性能监控
+								  <span class="three-d-box">
+										<span class="front"><i class="fa fa-area-chart"></i>实时性能监控</span>
+										<span class="back"><i class="fa fa-area-chart"></i>实时性能监控</span>
+								  </span>
+			                  </a>
+			                  </li>
+			                  
+			                <li>
+			                  <a href="fresh-diagnose.html" class="three-d"><i class="fa fa-ioxhost"></i>性能分析管理
+								  <span class="three-d-box">
+									  <span class="front"><i class="fa fa-ioxhost"></i>性能分析管理</span>
+									  <span class="back"><i class="fa fa-ioxhost"></i>性能分析管理</span>
+								 </span>
+			                  </a>
+			                </li>	 
+			                
+			                
+			                <li>
+			                  <a href="task-diagnose.html" class="three-d"><i class="fa fa-file-text-o"></i>测量任务下发列表
+								  <span class="three-d-box">
+									  <span class="front"><i class="fa fa-file-text-o"></i>测量任务下发列表</span>
+									  <span class="back"><i class="fa fa-file-text-o"></i>测量任务下发列表</span>
+								 </span>
+			                  </a>
+			                 </li>
+			                  
+                             <li>
+								 <a href="task.html" class="three-d"><i class="fa fa-plus-square-o"></i>新建测量任务
+									<span class="three-d-box">
+										<span class="front"><i class="fa fa-plus-square-o"></i>新建测量任务</span>
+										<span class="back"><i class="fa fa-plus-square-o"></i>新建测量任务</span>
+									</span>
+								 </a>
+							</li>
+						</ul>
+			        </li>
+						
+					<li>
+						<a href="warnlist.html" class="three-d"><i class="fa fa-warning"></i>告警管理
+							<span class="three-d-box">
+								<span class="front"><i class="fa fa-warning"></i>告警管理</span>
+								<span class="back"><i class="fa fa-warning"></i>告警管理</span>
+							</span>
+						</a>
+                         <ul class="secondul">
+                            <li>
+								<a href="warnlist.html" class="three-d"><i class="fa fa-file-text-o"></i>告警信息列表	
+								   <span class="three-d-box">
+										<span class="front"><i class="fa fa-file-text-o"></i>告警信息列表</span>
+										<span class="back"><i class="fa fa-file-text-o"></i>告警信息列表</span>
+									</span>
+								</a>
+							</li>
+                
+							<li>
+								<a href="warnhistory.html" class="three-d"><i class="fa fa-history "></i>历史告警信息列表	
+								    <span class="three-d-box">
+										<span class="front"><i class="fa fa-history "></i>历史告警信息列表</span>
+										<span class="back"><i class="fa fa-history "></i>历史告警信息列表</span>
+									</span>
+								</a>
+							</li>
+                 
+							<li>
+								<a href="shield.html" class="three-d"><i class="fa fa-plug"></i>屏蔽告警信息
+									<span class="three-d-box">
+										<span class="front"><i class="fa fa-plug"></i>屏蔽告警信息</span>
+										<span class="back"><i class="fa fa-plug"></i>屏蔽告警信息</span>
+									</span>
+								</a>
+							</li>
+                        </ul>
+					</li>
+				</ul>
+			</li>
+			
+			
+			<li>
+			<a href="chart04.html" class="three-d">
+			<i class="fa fa-bar-chart"></i>服务统计
+			<span class="three-d-box"><span class="front"><i class="fa fa-bar-chart"></i>服务统计</span><span class="back"><i class="fa fa-bar-chart"></i>服务统计</span></span>
+			</a>
+			
+			<ul class="clearfix unstyled drop-menu">
+			
+			            <li>
+				      	<a href="chart04.html" class="three-d">
+					        <i class="fa fa-bar-chart"></i>访问统计
+							<span class="three-d-box"><span class="front"><i class="fa fa-bar-chart"></i>访问统计</span><span class="back"><i class="fa fa-bar-chart"></i>访问统计</span></span>
+					    </a>
+					    
+					    <ul class="secondul">
+			                  <li>
+			                  <a href="chart04.html" class="three-d"><i class="fa fa-line-chart"></i>年访问频次统计
+			                  <span class="three-d-box"><span class="front"><i class="fa fa-line-chart"></i>年访问频次统计</span><span class="back"><i class="fa fa-line-chart"></i>年访问频次统计</span></span>
+			                  </a>
+			                  </li>
+			                  
+			                  <li>
+			                  <a href="chart05.html" class="three-d"><i class="fa fa-line-chart"></i>年总命中率统计
+			                  <span class="three-d-box"><span class="front"><i class="fa fa-line-chart"></i>年总命中率统计</span><span class="back"><i class="fa fa-line-chart"></i>年总命中率统计</span></span>
+			                  </a>
+			                  </li>
+			                  
+			                  <li>
+			                  <a href="chart06.html" class="three-d"><i class="fa fa-line-chart"></i>网站访问频次对比统计
+			                  <span class="three-d-box"><span class="front"><i class="fa fa-line-chart"></i>网站访问频次对比统计</span><span class="back"><i class="fa fa-line-chart"></i>网站访问频次对比统计</span></span>
+			                  </a>
+			                  </li>
+			                  
+			                  
+			              </ul>
+						</li>
+						
+						<li>
+						<a href="chart02.html" class="three-d">
+							<i class="fa fa-pie-chart"></i>热度统计
+							<span class="three-d-box"><span class="front"><i class="fa fa-pie-chart"></i>热度统计</span><span class="back"><i class="fa fa-pie-chart"></i>热度统计</span></span>
+						</a>
+						
+						<ul class="secondul">
+			                  <li>
+			                  <a href="chart02.html" class="three-d"><i class="fa fa-line-chart"></i>访问频次热度统计
+			                  <span class="three-d-box"><span class="front"><i class="fa fa-line-chart"></i>访问频次热度统计</span><span class="back"><i class="fa fa-line-chart"></i>访问频次热度统计</span></span>
+			                  </a>
+			                  </li>
+			                  
+			                  <li>
+			                  <a href="chart01.html" class="three-d"><i class="fa fa-line-chart"></i>访问时长热度统计
+			                  <span class="three-d-box"><span class="front"><i class="fa fa-line-chart"></i>访问时长热度统计</span><span class="back"><i class="fa fa-line-chart"></i>访问时长热度统计</span></span>
+			                  </a>
+			                  </li>
+			                  
+			                  <li>
+			                  <a href="chart03.html" class="three-d"><i class="fa fa-line-chart"></i>访问热度变化统计
+			                  <span class="three-d-box"><span class="front"><i class="fa fa-line-chart"></i>访问热度变化统计</span><span class="back"><i class="fa fa-line-chart"></i>访问热度变化统计</span></span>
+			                  </a>
+			                  </li>
+			                  
+			              </ul>
+						</li>
+						
+						
+						<li>
+						<a href="chart07.html" class="three-d">
+							<i class="fa fa-bar-chart"></i>业务统计
+							<span class="three-d-box"><span class="front"><i class="fa fa-bar-chart"></i>业务统计</span><span class="back"><i class="fa fa-bar-chart"></i>业务统计</span></span>
+						</a>
+						<ul class="secondul">
+			                  <li>
+			                  <a href="chart07.html" class="three-d"><i class="fa fa-line-chart"></i>各节点用户请求统计
+			                  <span class="three-d-box"><span class="front"><i class="fa fa-line-chart"></i>各节点用户请求统计</span><span class="back"><i class="fa fa-line-chart"></i>各节点用户请求统计</span></span>
+			                  </a>
+			                  </li>
+			                  
+			                  <li>
+			                  <a href="chart08.html" class="three-d"><i class="fa fa-line-chart"></i>各节点流量统计
+			                  <span class="three-d-box"><span class="front"><i class="fa fa-line-chart"></i>各节点流量统计</span><span class="back"><i class="fa fa-line-chart"></i>各节点流量统计</span></span>
+			                  </a>
+			                  </li>
+			                  
+			                  <li>
+			                  <a href="chart09.html" class="three-d"><i class="fa fa-line-chart"></i>各节点命中率统计
+			                  <span class="three-d-box"><span class="front"><i class="fa fa-line-chart"></i>各节点命中率统计</span><span class="back"><i class="fa fa-line-chart"></i>各节点命中率统计</span></span>
+			                  </a>
+			                  </li>
+			                  
+			                  <li>
+			                  <a href="chart10.html" class="three-d"><i class="fa fa-line-chart"></i>各节点服务成功率统计
+			                  <span class="three-d-box"><span class="front"><i class="fa fa-line-chart"></i>各节点服务成功率统计</span><span class="back"><i class="fa fa-line-chart"></i>各节点服务成功率统计</span></span>
+			                  </a>
+			                  </li>
+			              </ul>
+						</li>
+						
+						<li>
+						<a href="chart11.html" class="three-d">
+							<i class="fa fa-pie-chart"></i>并发统计
+							<span class="three-d-box"><span class="front"><i class="fa fa-pie-chart"></i>并发统计</span><span class="back"><i class="fa fa-pie-chart"></i>并发统计</span></span>
+						</a>
+						<ul class="secondul">
+			                  <li>
+			                  <a href="chart11.html" class="three-d"><i class="fa fa-line-chart"></i>历史并发统计
+			                  <span class="three-d-box"><span class="front"><i class="fa fa-line-chart"></i>历史并发统计</span><span class="back"><i class="fa fa-line-chart"></i>历史并发统计</span></span>
+			                  </a>
+			                  </li>
+			                  
+			                  <li>
+			                  <a href="chart12.html" class="three-d"><i class="fa fa-line-chart"></i>调度并发对比统计
+			                  <span class="three-d-box"><span class="front"><i class="fa fa-line-chart"></i>调度并发对比统计</span><span class="back"><i class="fa fa-line-chart"></i>调度并发对比统计</span></span>
+			                  </a>
+			                  </li>
+			                  
+			                  <li>
+			                  <a href="chart13.html" class="three-d"><i class="fa fa-line-chart"></i>并发数统计
+			                  <span class="three-d-box"><span class="front"><i class="fa fa-line-chart"></i>并发数统计</span><span class="back"><i class="fa fa-line-chart"></i>并发数统计</span></span>
+			                  </a>
+			                  </li>
+			                  
+			              </ul>
+						</li>
+				</ul>
+			</li>
+			
+			<li>
+		    	<a href="userlist.html" class="three-d"><i class="fa fa-shield"></i>安全管理
+			    <span class="three-d-box"><span class="front"><i class="fa fa-shield"></i>安全管理</span><span class="back"><i class="fa fa-shield"></i>安全管理</span></span></a>
+			<ul class="clearfix unstyled drop-menu">
+			
+			            <li>
+						<a href="userlist.html" class="three-d">
+							<i class="fa fa-users"></i>用户管理
+							<span class="three-d-box"><span class="front"><i class="fa fa-users"></i>用户管理</span><span class="back"><i class="fa fa-users"></i>用户管理</span></span>
+						</a>
+						<ul class="secondul">
+			                  <li>
+			                  <a href="userlist.html" class="three-d"><i class="fa fa-list-ul"></i>用户列表
+			                  <span class="three-d-box"><span class="front"><i class="fa fa-list-ul"></i>用户列表</span><span class="back"><i class="fa fa-list-ul"></i>用户列表</span></span>
+			                  </a>
+			                  </li>
+			                  
+			                  <li>
+			                  <a href="useradd.html" class="three-d"><i class="fa fa-plus-square-o"></i>新建用户
+			                  <span class="three-d-box"><span class="front"><i class="fa fa-plus-square-o"></i>新建用户</span><span class="back"><i class="fa fa-plus-square-o"></i>新建用户</span></span>
+			                  </a>
+			                  </li>
+			               </ul>
+						</li>
+						
+						<li>
+						<a href="rolelist.html" class="three-d">
+						    <i class="fa fa-user"></i>角色管理
+							<span class="three-d-box"><span class="front"><i class="fa fa-user"></i>角色管理</span><span class="back"><i class="fa fa-user"></i>角色管理</span></span>
+						</a>
+						<ul class="secondul">
+			                  <li>
+			                  <a href="rolelist.html" class="three-d"><i class="fa fa-outdent"></i>角色列表
+			                  <span class="three-d-box"><span class="front"><i class="fa fa-outdent"></i>角色列表</span><span class="back"><i class="fa fa-outdent"></i>角色列表</span></span>
+			                  </a>
+			                  </li>
+			                  
+			                  <li>
+			                  <a href="roleadd.html" class="three-d"><i class="fa fa-plus-square-o"></i>新建角色
+			                  <span class="three-d-box"><span class="front"><i class="fa fa-plus-square-o"></i>新建角色</span><span class="back"><i class="fa fa-plus-square-o"></i>新建角色</span></span>
+			                  </a>
+			                  </li>
+			                  
+			                  
+			                  
+			                  
+			              </ul>
+						</li>
+						
+						
+						<li>
+						<a href="assurancelist.html" class="three-d">
+							<i class="fa fa-gears"></i>认证管理
+							<span class="three-d-box"><span class="front"><i class="fa fa-gears"></i>认证管理</span><span class="back"><i class="fa fa-gears"></i>认证管理</span></span>
+						</a>
+						</li>
+						
+						<li>
+						<a href="log_management.html" class="three-d">
+							<i class="fa fa-list-alt"></i>日志管理
+							<span class="three-d-box"><span class="front"><i class="fa fa-list-alt"></i>日志管理</span><span class="back"><i class="fa fa-list-alt"></i>日志管理</span></span>
+						</a></li>
+				</ul>
+			</li>
+			
+		</ul>
+	</div>
+</section>
+</div>
+<!--自定义添加面包屑导航-->
+<div id="breadcrumbs">
+你当前所在的位置：<a href="index.html">首页</a>> <a href="warnlist.html"> 网络管理</a> > <a href="warnlist.html">性能管理</a>> <a href="fresh-diagnose.html">性能分析管理</a>
+</div>
+<!--自定义面包屑导航结束-->
+<div class='content'>
+
+ <div class="navbox">
+  <nav>
+		<ul class="mcd-menu">
+			<li><a href="gplotset.html"><i class="fa fa-globe"></i><strong>网络管理</strong></a></li>
+			<li><a  href="gplotset.html"><i class="fa fa-sitemap"></i>拓扑管理</a></li>
+			<li><a href="hd-cdmagps.html"><i class="fa fa-retweet"></i>调度管理</a></li>
+		    <li><a href="warnninglist.html" class="active"><i class="fa fa-support"></i>性能管理</a>
+			    <ul>
+                    <li><a href="warnninglist.html"><i class="fa fa-file-text-o"></i>性能阀值信息列表</a></li>
+			    	<li><a href="setwarn.html"><i class="fa fa-sort-numeric-asc"></i>性能阀值设置</a></li>
+			        <li><a href="real-time.html"><i class="fa fa-area-chart"></i>实时性能监控</a></li>
+			      	<li><a href="fresh-diagnose.html" class="liactive"><i class="fa fa-ioxhost"></i>性能分析管理</a></li>
+			      	<li><a href="task-diagnose.html"><i class="fa fa-file-text-o"></i>测量任务下发列表</a></li>
+			      	<li><a href="task.html"><i class="fa fa-plus-square-o"></i>新建测量任务</a></li>
+			    </ul>
+			</li>
+			<li><a href="warnlist.html"><i class="fa fa-warning"></i>告警管理</a>
+            	<ul>
+            	    <li><a href="warnlist.html"><i class="fa fa-file-text-o"></i>告警信息列表</a></li>
+                    <li><a href="warnhistory.html"><i class="fa fa-history "></i>历史告警信息列表</a></li>
+				    <li><a href="shield.html"><i class="fa fa-plug"></i>屏蔽阀值列表</a></li>
+                </ul>
+           </li>
+	    </ul>
+	</nav>
+</div>
+
+
+
+
+<div class="tablelist">
+
+<div class="chioceresearch">
+    <div class="tableboxtits"><i class="fa fa-crosshairs"></i>请选择性能分析条件</div>
+    
+    <div class="selectbox">
+    
+    <div class="selectboxlist">
+    <h3>请选择性能参数:</h3>
+    <ul class="datouwang"  id="datouwang1">
+
+
+	<li><input type="radio" name="radio" data-labelauty="CPU" checked></li>
+	<li><input type="radio" name="radio" data-labelauty="内存"></li>
+	<li><input type="radio" name="radio" data-labelauty="流量"></li>
+	<li><input type="radio" name="radio" data-labelauty="磁盘空间"></li>
+    </ul>
+    
+    </div>
+    
+    
+    <div class="selectboxlist">
+    <h3>请选择统计参数:</h3>
+    <ul class="datouwang"  id="datouwang2">
+    <li><input type="checkbox" name="checkbox" data-labelauty="全选" checked></li>
+	<li><input type="checkbox" name="checkbox" data-labelauty="波峰值" checked></li>
+	<li><input type="checkbox" name="checkbox" data-labelauty="波谷值" checked></li>
+	<li><input type="checkbox" name="checkbox" data-labelauty="平均值" checked></li>
+    </ul>
+    
+    </div>
+   
+    <div class="selectboxlist">
+    
+    <h3>请选择时间:</h3>
+    <div class="timeselectbox">
+           <select>
+        
+           	     <option>2015</option>
+        	     <option>2014</option>
+        	     <option>2013</option>
+        	     <option>2012</option>
+           </select>
+           
+           <select>
+        	     <option>选择月份</option>
+           	     <option>1月</option>
+        	     <option>2月</option>
+        	     <option>3月</option>
+        	     <option>4月</option>
+        	     <option>5月</option>
+        	     <option>6月</option>
+        	     <option>7月</option>
+        	     <option>8月</option>
+        	     <option>9月</option>
+        	     <option>10月</option>
+        	     <option>11月</option>
+        	     <option>12月</option>
+           </select>
+           
+           <select>
+        	     <option>选择日期</option>
+           	     <option>1日</option>
+        	     <option>2日</option>
+        	     <option>3日</option>
+        	     <option>4日</option>
+        	     <option>5日</option>
+        	     <option>6日</option>
+        	     <option>7日</option>
+        	     <option>8日</option>
+        	     <option>9日</option>
+        	     <option>10日</option>
+        	     <option>11日</option>
+        	     <option>12日</option>
+        	     <option>13日</option>
+        	     <option>14日</option>
+        	     <option>15日</option>
+        	     <option>16日</option>
+        	     <option>17日</option>
+        	     <option>18日</option>
+        	     <option>19日</option>
+        	     <option>20日</option>
+        	     <option>21日</option>
+        	     <option>22日</option>
+        	     <option>23日</option>
+        	     <option>24日</option>
+        	     <option>25日</option>
+        	     <option>26日</option>
+        	     <option>27日</option>
+        	     <option>28日</option>
+        	     <option>29日</option>
+        	     <option>30日</option>
+           </select>
+    </div>
+    </div>
+    
+    <!--<div class="selectboxlist">
+    <h3>请选择设备类型:</h3>
+    <ul class="datouwang" id="datouwang1">
+	<li><input type="radio" name="radio" data-labelauty="DNS服务器"></li>
+	<li><input type="radio" name="radio" data-labelauty="负载均衡器"></li>
+	<li><input type="radio" name="radio" data-labelauty="缓存服务器"></li>
+	<li><input type="radio" name="radio" data-labelauty="Tracker服务器"></li>
+	<li><input type="radio" name="radio" data-labelauty="网管平台服务器"></li>
+    </ul>
+    </div>-->
+    
+    
+    <div class="selectboxlist">
+    
+    <h3>请选择设备：</h3>
+    <div class="hybriddiv">
+	<input name="district_cn"  id="district_cn" type="text" value="请选择设备"  readonly="true" class="sltinput" />
+	<input name="citycategory" id="citycategory" type="hidden" value="" />
+	
+	<div style="display:none" id="sel_district">
+		<div class="OpenFloatBoxBg"></div>
+		<div class="OpenFloatBox">
+        <div class="textconton chocknode">
+        <div class="hiddentr"><div class="headboring"><span><i class="fa fa-joomla"></i>选择设备</span></div></div>
+        
+        <div class="choicelist" style="margin-top:10px;"><label>请选择服务类型:</label>
+               <select>
+        	     <option>DNS服务器</option>
+           	     <option>负载均衡器</option>
+        	     <option>缓存服务器</option>
+        	     <option>Tracker服务器</option>
+        	     <option>网管平台服务器</option>
+               </select>
+              </div>
+              
+              
+            <div class="choicelist" style="margin-top:10px;"><label>请选择节点:</label>
+               <select>
+        	     <option>甘肃</option>
+           	     <option>新疆</option>
+        	     <option>青海</option>
+        	     <option>宁夏</option>
+        	    
+               </select>
+              </div>
+              
+              <div class="choicelist" style="margin-top:10px;"><label>请选择设备:</label></div>
+			<div class="content coder" style="margin-top:0">
+					<div class="item">
+						<label title="甘肃：GSHC00001" class="titem"><input  type="checkbox"  title="甘肃：GSHC00001" class="b" />甘肃：GSHC00001</label>
+					</div>
+					<div class="item">
+						<label title="甘肃：GSHC00002" class="titem"><input  type="checkbox"  title="甘肃：GSHC00002" class="b" />甘肃：GSHC00002</label>
+					</div>
+					<div class="item">
+						<label title="甘肃：GSHC00003" class="titem"><input   type="checkbox"  title="甘肃：GSHC00003" class="b" />甘肃：GSHC00003</label>
+					</div>
+					<div class="item">
+						<label title="甘肃：GSHC00004" class="titem"><input  type="checkbox"  title="甘肃：GSHC00004" class="b" />甘肃：GSHC00004</label>
+					</div>
+					<div class="item">
+						<label title="甘肃：GSHC00005" class="titem"><input  type="checkbox"  title="甘肃：GSHC00005" class="b" />甘肃：GSHC00005</label>
+					</div>
+					<div class="item">
+						<label title="甘肃：GSHC00006" class="titem"><input   type="checkbox"   title="甘肃：GSHC00006" class="b" />甘肃：GSHC00006</label>
+					</div>
+					<div class="item">
+						<label title="甘肃：GSHC00007" class="titem"><input  type="checkbox"  title="甘肃：GSHC00007" class="b" />甘肃：GSHC00007</label>
+					</div>
+					<div class="item">
+						<label title="甘肃：GSHC00008" class="titem"><input type="checkbox" title="甘肃：GSHC00008" class="b" />甘肃：GSHC00008</label>
+					</div>
+					<div class="item">
+						<label title="甘肃：GSHC00009" class="titem"><input  type="checkbox"  title="甘肃：GSHC00009" class="b" />甘肃：GSHC00009</label>
+					</div>
+					<div class="item">
+						<label title="甘肃：GSHC00010" class="titem"><input  type="checkbox" title="甘肃：GSHC00010" class="b" />甘肃：GSHC00010</label>
+					</div>
+                     <div class="btnclose" onclick='DialogClose("#sel_district")'></div>
+					<div class="clear"></div>
+				</div>
+				<div class="txt">
+					<div class="selecteditem"></div>
+				</div>
+				
+				<div class="txt"><div class="libtn" style="display:block"><a type="button" class="btn btn-7 bsh addpad" style="padding-left:30px;padding-right:30px;" onclick="DialogClose('#sel_district')">确定</a></div></div>
+		</div>
+	</div>
+	
+       		
+       </div> 
+    </div> 
+    </div>
+
+   
+<!--<script src="js/jquery-1.8.3.min.js"></script> 与顶部导航和分页均冲突-->
+<script src="js/jquery-labelauty.js"></script>
+<script>
+$(function(){
+	$('#datouwang2 :input').labelauty();
+	$('#datouwang1 :input').labelauty();
+});
+</script>
+
+        
+        
+       <!--<div class="chresearch"><label>资源名称:</label><input type="text"/></div>-->
+         
+    <div class="fullline ">
+        <button class="btn btn-7 bsh" onclick="document.getElementById('chartsdiv').style.display='inline-block'"><i class="fa fa-bar-chart"></i>生成性能分析图表</button>
+	 	<button class="btn btn-7 bsh"><i class="fa fa-file-o"></i>创建性能分析报表</button></div>
+    <div style="clear:both"></div>
+    
+   
+</div>
+</div>
+
+<div class="chartsdiv" id="chartsdiv">
+  <div id="chart_1" class="chart"></div>
+  <div id="chart_2" class="chart"  style="display:none"></div>
+</div>
+</div>
+
+
+
+
+</div>
+<script>
+	$(function(){
+		$("#datouwang1").find("li").each(function(i){
+			if(i==0){
+				$(this).click(function(e){
+				/*	$("#datouwang2").find("li").eq(0).show();*/
+					
+					$("#datouwang2 input").attr("type","checkbox");
+				});
+			}else{
+				$(this).click(function(e){
+				/*	$("#datouwang2").find("li").eq(0).hide();*/
+					$("#datouwang2 input").attr("type","radio");
+				})
+			}
+		})
+		
+       $("#datouwang2").find("li").eq(0).click(function(){
+			$(this).parent().find("input").prop("checked",$(this).find("input").prop("checked"));
+		});
+ 	   
+ 	   $("#datouwang2").find("input").each(function(i){
+			if(i!=0){
+				$(this).click(function(){
+					var flag=true;
+					$("#datouwang2").find("input").each(function(i){
+						if(i!=0){
+							if(!$(this).prop("checked")){
+								flag=false;
+							}
+						}
+					})
+					$("#datouwang2").find("li").eq(0).find("input").prop("checked",flag);
+			});
+			}
+			
+		});
+	})
+</script> 
+</body>
+
+</html>

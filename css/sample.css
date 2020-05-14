@@ -1,0 +1,65 @@
+@charset "utf-8";
+*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+h1, h2, h3, h4, h5, h6{color:#444444;}
+.content{width:90%;margin:40px auto;}
+/* example */
+.example{position:relative;width:940px;margin:0 auto;}
+.example .brick{cursor:pointer;position:relative;font-weight:bold;}
+.example .brick .delete{display:block;color:white;background:rgba(255, 255, 255, 0.2);width:30px;height:30px;top:0;right:0;position:absolute;text-align:center;line-height:30px;text-decoration:none;z-index:9}
+.example .brick.small{width:140px;height:140px;text-align:center;color:#fff;overflow:hidden;display:inline-block}
+.example .brick.large{width:300px;height:300px;text-align:center;color:#fff;font-size:30px;overflow:hidden;}
+.example .brick.large .delete{font-size:14px;}
+.example .brick:nth-child(1){background:#1abc9c;}
+.example .brick:nth-child(2){background:#16a085;}
+.example .brick:nth-child(3){background:#2ecc71;}
+.example .brick:nth-child(4){background:#27ae60;}
+.example .brick:nth-child(5){background:#3498db;}
+.example .brick:nth-child(6){background:#2980b9;}
+.example .brick:nth-child(7){background:#9b59b6;}
+.example .brick:nth-child(8){background:#32ccc7;}
+.example .brick:nth-child(9){background:#34495e;}
+.example .brick:nth-child(10){background:#2c3e50;}
+.example .brick:nth-child(11){background:#f1c40f;}
+.example .brick:nth-child(12){background:#f39c12;}
+.example .brick:nth-child(13){background:#e67e22;}
+.example .brick:nth-child(14){background:#d35400;}
+.example .brick:nth-child(15){background:#e74c3c;}
+.example .brick:nth-child(16){background:#c0392b;}
+.example .brick:nth-child(17){background:#666;}
+.example .brick:nth-child(18){background:#bdc3c7;}
+.example .brick:nth-child(19){background:#95a5a6;}
+.example .brick:nth-child(20){background:#7f8c8d;}
+.example .brick:nth-child(21){background:#85e5f0;}
+.example .brick:nth-child(22){background:#48a6e8;}
+
+.example .brick i{line-height:110px;position:absolute;z-index:7;margin-left:-10px;}
+.example .brick:hover{color: #fff;}
+.example .brick span{position:absolute;display:inline-block;z-index:6;width:100%;top:0;left:0;line-height:20px;}
+.example .brick.small span{line-height:160px;}
+.example .brick.large span{line-height:330px;}
+.example .brick.large i{line-height:230px;}
+	
+.example .brick::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 150%;
+	height: 100%;
+	background: #37474f;
+	z-index: -1;
+	-webkit-transform: rotate3d(0, 0, 1, -45deg) translate3d(0, -3em, 0);
+	transform: rotate3d(0, 0, 1, -45deg) translate3d(0, -3em, 0);
+	-webkit-transform-origin: 0% 100%;
+	transform-origin: 0% 100%;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s, background-color 0.3s;
+	transition: transform 0.3s, opacity 0.3s, background-color 0.3s;
+}
+
+.example .brick:hover::before{	opacity:1;
+	background-color: #ddd;
+	-webkit-transform: rotate3d(0, 0, 1, 0deg);
+	transform: rotate3d(0, 0, 1, 0deg);
+	z-index:1;
+	-webkit-transition-timing-function: cubic-bezier(0.5, 1, 0.3, 1);
+	transition-timing-function: cubic-bezier(0.5, 1, 0.3, 1);}

@@ -1,0 +1,10 @@
+@charset "utf-8";
+body{padding:0;margin:0;font:normal 12px/24px "\5FAE\8F6F\96C5\9ED1";color:#444;}
+table{width:100%;border:0;margin:50px auto 0;text-align:center;border-collapse:collapse;border-spacing:0;}
+table th{background:#A1ABC3;font-weight:normal;line-height:30px;font-size:14px;color:#FFF;}
+table tr:nth-child(odd){background:#D6DDEE;}
+table td:nth-child(even){color:#C00;}
+table tr:nth-child(5){background:#C9CFDC;color:#FFF;}
+table tr:hover{background:#C9CFDC;color:#FFF;}
+table td,table th{border:1px solid #EEE;padding:5px 0}
+table i{padding:0 10px;}

@@ -1,0 +1,70 @@
+@charset "utf-8";
+*{margin:0;padding:0;list-style-type:none;}
+a,img{border:0;}
+body{font:16/180% Arial, Helvetica, sans-serif, "微软雅黑","黑体";background:#eee;text-align:center;}
+
+table {border-collapse:collapse;border-spacing:0;}
+
+td,th {padding:0;}
+
+
+.clear {clear:both;}
+.clear:before,.clear:after {content:"";display:table;}
+.clear:after {clear:both;}
+
+/* form-div */
+.form-div{background-color:rgba(255,255,255,0.27); border-radius:10px; width:424px; margin:0 auto;padding:30px 0 20px 0px; font-size:14px;font-weight:bold;box-shadow:inset 0px 0px 10px rgba(255,255,255,0.5),0px 0px 15px rgba(75,75,75,0.3); text-align:left;}
+
+.form-div input[type="text"], .form-div input[type="password"], .form-div input[type="email"]{width:268px; margin:10px; line-height:20px; font-size:16px;}
+.form-div input[type="checkbox"]{margin:20px 0 20px 10px;}
+.form-div input[type="button"],.form-div input[type="submit"]{margin:10px 20px 0 0;}
+
+.form-div table{margin:0 auto; text-align:right; color:rgba(64,64,64,1.00);}
+.form-div table img{vertical-align:middle; margin:0 0 5px 0;}
+.footer{color:rgba(64,64,64,1.00); font-size:12px; margin-top:30px;}
+.form-div .buttons{padding-left:200px;}
+
+input[type="text"], input[type="password"], input[type="email"] {
+    border-radius:8px;
+    box-shadow:inset 0 2px 5px #eee;
+    padding:10px;
+    border:1px solid #D4D4D4;
+    color:#333333;
+    margin-top:5px;
+}
+input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus {
+    border:1px solid #50afeb;
+	outline:none;
+}
+input[type="button"], input[type="submit"] {
+ 
+    background-color:#48a6e8;
+
+    text-align:center;
+
+   
+    border:none;
+
+
+}
+
+.loginForm{ 
+    position: relative;
+}
+.language{
+    position: absolute;
+    top:30px;
+    right:32px;
+    
+}
+.change{ float:left;}
+.city h2{ position: absolute; top:-68px; right: 60px; font-size: 14px; color: #31a18e;}
+#togglecity{ position: absolute; top:-64px; right: 40px; cursor:pointer;  width: 14px; height: 10px; background: url('../images/changeBtn.png') no-repeat; border:none;}
+.citylist{ position:absolute; top: -50px; right:30px; z-index:11111; padding:5px; background:#323f5e; width:80px; display:none;}
+ul{ list-style:none; padding:0; margin:0;}
+ul.listcity li{}
+ul.listcity a{ display:block; text-align:center; padding:2px 5px; color:#fff; font-size:14px;}
+ul.listcity a:hover{ background:#9aa0af; color:#CF0;}
+.languge li{
+    text-align: left;
+}

@@ -1,0 +1,15 @@
+.example .brick i{line-height:110px;position:absolute;z-index:7;margin-left:62px\0;}
+.example .brick.large i{line-height:230px;margin-left:130px\0}
+.nav-menu li a {
+display: block;
+text-decoration: none;
+font-family: 'sansationregular';
+-webkit-font-smoothing: antialiased;
+-moz-font-smoothing: antialiased;
+font-smoothing: antialiased;
+text-transform: capitalize;
+overflow: visible;
+line-height: 38px;
+font-size: 16px;
+padding: 18px\0 0;
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>新增详细页</title>
+<link href="css/jquery.window.css" rel="stylesheet" type="text/css" />
+<link href="css/jquery.codeview.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="css/reset.css" type="text/css"/>
+<link rel="stylesheet" href="css/table.css" type="text/css"/>
+</head>
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery-ui.js"></script>
+<script type="text/javascript" src="js/jquery.codeview.js"></script>
+<script type="text/javascript" src="js/jquery.share.js"></script>
+<script type="text/javascript" src="js/jquery.window.js"></script>
+<script type="text/javascript" src="js/jquery.window.min.js"></script>		
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/form.js"></script>
+<body>    	
+<form action="#" id="formEdit" name="formEdit">
+    <div id='windowContent' style="display:block; background:#fff;">
+        <table width="100%" border="0" cellpadding="0" cellspacing="0" class="detailedTable" style="table-layout:fixed;">
+        	<caption>新建样本企业信息</caption>
+            <tr>
+                <th class="thW180">企业名称:</th>
+                <td colspan="4">
+                    <input type="text" class="searchInput inputW230"/>
+                </td>
+            </tr>
+            <tr>
+                <th class="thW180">企业性质(类型):</th>
+                <td colspan="4">
+                    <div class="selectMain selectBox">
+                        <select class="select">
+                            <option>国有</option>
+                            <option>私有</option>
+                            <option>合资</option>
+                        </select>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th class="thW180">所属楼宇:</th>
+                <td colspan="4">
+                    <div class="selectMain selectBox">
+                        <select class="select">
+                            <option>东城区</option>
+                            <option>西城区</option>
+                            <option>朝阳区</option>
+                            <option>海淀区</option>
+                        </select>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th class="thW180">注册资金:</th>
+                <td colspan="4">
+                    <input type="text" class="searchInput inputW130"/>
+                </td>
+            </tr>
+            <tr>
+                <th class="thW180">注册地:</th>
+                <td>
+                    <div class="selectMain selectBox">
+                        <select class="select">
+                            <option>东城区</option>
+                            <option>西城区</option>
+                            <option>朝阳区</option>
+                            <option>海淀区</option>
+                        </select>
+                    </div>
+                </td>
+                <td>
+                    <div class="selectMain selectBox">
+                        <select class="select">
+                            <option>东城区</option>
+                            <option>西城区</option>
+                            <option>朝阳区</option>
+                            <option>海淀区</option>
+                        </select>
+                    </div>
+                </td>
+                <td>
+                    <div class="selectMain selectBox">
+                        <select class="select">
+                            <option>东城区</option>
+                            <option>西城区</option>
+                            <option>朝阳区</option>
+                            <option>海淀区</option>
+                        </select>
+                    </div>
+                </td>
+                <td>
+                    <input type="text" class="searchInput inputW180"/>
+                </td>
+            </tr>
+            <tr>
+                <th class="thW180">企业人数:</th>
+                <td colspan="4">
+                    <input type="text" class="searchInput inputW130"/>
+                </td>
+            </tr>
+            <tr>
+                <th class="thW180">办公面积:</th>
+                <td>
+                    <input type="text" class="searchInput inputW130"/>
+                </td>
+                <td colspan="3">(万平方米)</td>
+            </tr>
+            <tr>
+                <th class="thW180">企业经营收入:</th>
+                <td>
+                    <input type="text" class="searchInput inputW130"/>
+                </td>
+                <td colspan="3">(万元/月)</td>
+            </tr>
+        </table>
+        <div style='padding:5px; text-align:center;'>
+            <input type='button' name='button' value='保存' style='margin:0 5px; width:50px; height:22px; background:url(images/routineBtn.png) no-repeat 0 -96px; font-size:0; border:none; color:#44b5ff; cursor:pointer; vertical-align:middle;' onclick="_Form.prototype.alertSuccess('系统提示','恭喜您保存成功恭喜您保存成功恭喜您保存成功恭喜您保存成功恭喜您保存成功')" />
+            <input type='button' name='button' value='重置' style='margin:0 5px; width:50px; height:22px; background:url(images/routineBtn.png) no-repeat -56px -96px; font-size:0; border:none; color:#44b5ff; cursor:pointer; vertical-align:middle;' onclick="_Form.prototype.alertFail('系统提示','数据未保存成功数据未保存成功')" />
+
+            <input type='button' name='button' value='取消' style='margin:0 5px; width:50px; height:22px; background:url(images/routineBtn.png) no-repeat 0 -32px; font-size:0; border:none; color:#44b5ff; cursor:pointer; vertical-align:middle;' onclick="_Form.prototype.alertFail('系统提示','数据未保存成功数据未保存成功')" />
+        </div>
+    </div>
+</form>
+</body>
+</html>

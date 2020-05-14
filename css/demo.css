@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+
+#breadcrumbs{width:90%;margin:120px auto 0 auto;padding:0;font-size:14px}
+.triggered {margin:70px auto 0 auto;padding:0;font-size:14px;width:90%;}
+#breadcrumbs a{color:#333;font-size:14px}
+#breadcrumbs a:last-child{color:#2980b9}
+
+
+
+.navbox {
+	position: relative;
+	float: left;
+width: 20%;
+}
+
+.navbox ul.nav {
+	list-style: none;
+	display: block;
+	
+	position: relative;
+	top:0;
+	left:0;
+	padding: 40px 0 40px 0;
+	background: url(../images/shad2.png) no-repeat;
+	-webkit-background-size: 50% 100%;
+}
+
+.navbox ul.nav li {
+	margin: 10px 0 0 0;
+}
+
+.navbox ul.nav li a {
+	-webkit-transition: all 0.3s ease-out;
+	background: #17aa56 url(../images/border.png) no-repeat;
+	color: #fff;
+	padding:10px 15px 10px 15px;
+	-webkit-border-top-right-radius: 0;
+ 	-webkit-border-bottom-right-radius:10px;
+	width: 80%;
+	display: block;
+	text-decoration: none;
+	-webkit-box-shadow: 2px 2px 4px #888;
+}
+.navbox ul.nav li a.leftnav_active{background:#0C5943}
+.navbox ul.nav li a:hover {
+	background: #fff url(../images/border.png) no-repeat;
+	color: #67a5cd;
+	width: 85%;
+	padding: 10px 15px 10px 30px;
+}
+
+
+.tablelist{width:80%;float:left;}
+.tablelist table{margin-top:0px}
+#containerbox{heig}

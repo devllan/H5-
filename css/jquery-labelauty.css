@@ -1,0 +1,152 @@
+﻿*{font-family:Microsoft YaHei }
+
+/* Prevent text and blocks selection */
+.selectbox input.labelauty + label ::selection { background-color: rgba(255, 255, 255, 0); }
+.selectbox input.labelauty + label ::-moz-selection { background-color: rgba(255, 255, 255, 0); }
+
+/* Hide original checkboxes. They are ugly! */
+.selectbox input.labelauty { display: none !important; }
+
+/*
+ * Let's style the input
+ * Feel free to work with it as you wish!
+ */
+.selectbox input.labelauty + label
+{
+	display: table;
+	font-size: 14px;
+	padding: 10px 20px 10px 10px;
+	background-color: #99A1B3;
+	color: #fff;
+	cursor: pointer;
+
+	border-radius: 3px 3px 3px 3px;
+	-moz-border-radius: 3px 3px 3px 3px;
+	-webkit-border-radius: 3px 3px 3px 3px;
+
+
+	transition: background-color 0.25s;
+	-moz-transition: background-color 0.25s;
+	-webkit-transition: background-color 0.25s;
+	-o-transition: background-color 0.25s;
+
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-o-user-select: none;
+}
+
+/* Stylish text inside label */
+
+.selectbox input.labelauty + label > span.labelauty-unchecked,
+.selectbox input.labelauty + label > span.labelauty-checked
+{
+	display: inline-block;
+	line-height: 16px;
+	vertical-align: bottom;
+}
+
+/* Stylish icons inside label */
+
+.selectbox input.labelauty + label > span.labelauty-unchecked-image,
+.selectbox input.labelauty + label > span.labelauty-checked-image
+{
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	vertical-align: bottom;
+	background-repeat: no-repeat;
+	background-position: left center;
+
+	transition: background-image 0.5s linear;
+	-moz-transition: background-image 0.5s linear;
+	-webkit-transition: background-image 0.5s linear;
+	-o-transition: background-image 0.5s linear;
+}
+
+/* When there's a label, add a little margin to the left */
+.selectbox input.labelauty + label > span.labelauty-unchecked-image + span.labelauty-unchecked,
+.selectbox input.labelauty + label > span.labelauty-checked-image + span.labelauty-checked
+{
+	margin-left: 7px;
+}
+
+/* When not Checked */
+.selectbox input.labelauty:not(:checked):not([disabled]) + label:hover
+{
+	background-color: #515d77;
+	color: #a7a7a7;
+}
+.selectbox input.labelauty:not(:checked) + label > span.labelauty-checked-image
+{
+	display: none;
+}
+
+.selectbox input.labelauty:not(:checked) + label > span.labelauty-checked
+{
+	display: none;
+}
+
+/* When Checked */
+.selectbox input.labelauty:checked + label
+{
+	background-color: #F6B04D;
+	color: #ffffff;
+}
+
+.selectbox input.labelauty:checked:not([disabled]) + label:hover
+{
+	background-color: #f2a12f;
+}
+.selectbox input.labelauty:checked + label > span.labelauty-unchecked-image
+{
+	display: none;
+}
+
+.selectbox input.labelauty:checked + label > span.labelauty-unchecked
+{
+	display: none;
+}
+
+.selectbox input.labelauty:checked + label > span.labelauty-checked
+{
+	display: inline-block;
+}
+
+.selectbox input.labelauty.no-label:checked + label > span.labelauty-checked
+{
+	display: block;
+}
+
+/* When Disabled */
+.selectbox input.labelauty[disabled] + label
+{
+	opacity: 0.5;
+}
+
+/* Add a background to (un)checked images */
+.selectbox input.labelauty + label > span.labelauty-unchecked-image
+{
+	background-image: url( ../images/input-unchecked.png );
+}
+
+.selectbox input.labelauty + label > span.labelauty-checked-image
+{
+	background-image: url( ../images/input-checked.png );
+}
+
+.datouwang li{display:inline-block;}
+.selectbox h3{height:35px;line-height:35px;font-size:14px;float:left;padding-right:10px;width:125px}
+.selectbox .datouwang{display:block;float:left;vertical-align:middle}
+.selectboxlist{width:100%;margin-bottom:10px;float:left}
+.selectboxlist input[type="date"]{height:35px;line-height:35px;font-size:14px;padding:0 0 0 20px;width:368px}
+.selectbox select{padding:0 10px;width:130px;height:35px;line-height:35px;font-size:1em;margin-right:10px;}
+.selectbox .hybriddiv select{margin-right:0}
+.selectbox .hybriddiv{width:455px;float:left;margin-bottom:5px;}
+.selectbox .hybriddiv input[type="text"]{width:420px;}
+.hybriddiv label,.hybriddiv select{font-size:14px;}
+.selectbox .OpenFloatBox .content .item{width:180px}
+.selectbox .hybriddiv .OpenFloatBox .content .item label{width:160px}
+.selectbox .OpenFloatBox .selecteditem label{width:180px}
+.selectbox .timeselectbox{width:455px;float:left;margin-bottom:5px;}
+.selectbox .timeselectbox select{font-size:14px;}

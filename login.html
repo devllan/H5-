@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>登陆</title>
+</head>
+
+  <link rel="stylesheet" href="css/login.css">
+  <link rel="stylesheet" href="assets/css/styles.css" />
+
+<body>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/easyBackground-min.js"></script>
+
+ <!-- JavaScript includes - jQuery, the complexify plugin and our own script.js -->
+<style type="text/css">
+
+  </style>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('body').easyBackground({
+		wrapNeighbours: true
+	});
+});
+</script>
+
+ <div id="main">        	      	
+        	<form class="loginForm" method="post" action="">
+        		<h1>互联网维哈语资源共享平台</h1> 
+                <div class="city" style="position:relative; z-index:11111;">
+                    <h2><b id="city">中文</b></h2>
+                    <!--切换城市开始--> 
+                     <div class="change">
+                        <button id="togglecity" class="togglecity"></button>
+                        <div id="citylist" class="citylist">
+                            <ul class="listcity">
+                                <li><a href="">中文</a></li>
+                                <li><a href="">ئۇيغۇر تىلى</a></li>
+                                <li><a href="">қазақ тілі </a></li>
+                            </ul>
+                        </div>
+                     </div>             
+                     <!--切换城市结束-->
+                </div>
+        		<div class="row user">
+	    			<input type="text" id="user" name="user" placeholder="用户名" onfocus="if (placeholder =='用户名'){placeholder =''}"onblur="if (placeholder ==''){placeholder='用户名'}"/>
+        		</div>
+        		
+        		<div class="row pass">
+        			<input type="password" id="password1" name="password1" placeholder="密码" onfocus="if (placeholder =='密码'){placeholder =''}"onblur="if (placeholder ==''){placeholder='密码'}"/>
+        		</div>
+        		
+				<!--
+        		<div class="row verify">
+        	    	<span>
+        			<input type="text" id="verify" name="verify" placeholder="验证码" onfocus="if (placeholder =='验证码'){placeholder =''}"onblur="if (placeholder ==''){placeholder='验证码'}"/>
+        			<img src="img/bg2.jpg" width="100" height="48"/>
+        			</span>
+        		</div>
+        		-->
+        	
+        		
+        	<!--	<div class="row pass">
+        			<input type="password" id="password2" name="password2" placeholder="Password (repeat)" disabled="true" />
+        		</div>-->
+        		
+        		<!-- The rotating arrow -->
+        	
+        		
+        	    <button class="loginbtn"><a href="index.html">登&nbsp;陆</a></button>
+				<!--
+        		<button class="loginbtn"><a href="the-third-assurance.html">第三方认证</a></button>
+				-->
+        		
+        	</form>
+        </div>
+                
+       
+		     
+		<!--<script src="assets/js/jquery-1.7.2.min.js"></script>
+		<script src="assets/js/jquery.complexify.js"></script>
+		<script src="assets/js/script.js"></script>-->
+<script type="text/javascript" language="javascript">
+document.onclick=function(event){
+    event=event||window.event;      
+    var target=event.target||event.srcElement;
+
+    if(target.id!='citylist'&&target.id!='togglecity'){
+        document.getElementById('citylist').style.display='none';
+        }else if(target.id=='togglecity'){
+            document.getElementById('citylist').style.display='block';}
+            if( target.tagName=='A'&&target.parentNode.parentNode.className=="listcity") {
+        document.getElementById('city').innerHTML=target.innerHTML;
+        //alert(target.innerHTML) 
+    }
+    
+    if(event.preventDefault) //标准的
+        event.preventDefault();
+    else  
+        event.returnValue=false;//IE的
+
+}
+ </script>
+
+</body>
+</html>

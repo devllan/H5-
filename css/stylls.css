@@ -1,0 +1,31 @@
+@charset "utf-8";
+.sltinput{width:185px;background:url(../images/09.gif) no-repeat right center;cursor:pointer;border:1px solid #cccccc;height:18px;line-height:18px;padding:3px;color:#666666;}
+
+/* OpenFloatBox */
+.OpenFloatBoxBg{position:absolute;display:none;background:#666666}
+.OpenFloatBox{position:absolute;width:600px;top:50%;left:50%;margin-left:-300px;z-index:2223}
+.OpenFloatBox .title{background:url(../images/72.gif) repeat-x;height:30px;color:#333333}
+.OpenFloatBox .title h4{line-height:16px;margin:0px;float:left;font-size:14px;padding:8px 10px 0px 15px;}
+.OpenFloatBox .title .DialogClose{width:30px;display:block;  background:url(../images/delete.png)no-repeat 0px -30px;float:right;height:30px;cursor:pointer}
+.OpenFloatBox .title .spanhover{background-position:0px -60px}
+.OpenFloatBox .tip{line-height:30px;padding-left:26px;background:url(../images/72.gif) #ffffff no-repeat 0px -90px;height:30px;color:#ff6600;}
+.OpenFloatBox .selecteditem{border:2px solid #8FB2CA;max-height:125px;overflow-x:hidden;text-align:left;background-color:#F0F1F3;width:100%;display:none;color:#5f5f5f;padding:10px 0px}
+.item{width:20%}
+.OpenFloatBox .selecteditem .empty{color:#0066cc;cursor:pointer;height: 22px;
+line-height: 22px;}
+.OpenFloatBox .selecteditem label{width:20%;line-height:22px;display:block;float:left;color:#5f5f5f;cursor:pointer;padding-left:10px}
+.OpenFloatBox .selecteditem input{margin-right:5px;vertical-align: middle;}
+.OpenFloatBox .txt{padding:0;text-align:center;font-size: 14px;}
+.OpenFloatBox .content{background-color: #F9FAFC;
+font-size: 14px;
+color: #5f5f5f;width:100%;margin-top: 15px;padding-top:5px;margin-bottom: 15px;}
+.OpenFloatBox .content .item{width:20%;float:left;height:20px;cursor:pointer;}
+.OpenFloatBox .content .item .titem{display:block}
+.OpenFloatBox .content .item .titem input{margin-right:5px;vertical-align: middle;}
+.OpenFloatBox .content .item label{text-align:left;padding-left:10px;}
+.OpenFloatBox .content .item .sitem{z-index:2;border:#ff9900 1px solid;position:absolute;background-color:#fffef0;margin-top:20px;width:150px;display:none;}
+.OpenFloatBox .content .item .sitem label{padding-bottom:5px;line-height:23px}
+/* but80 */
+.but80{background:url(../images/36.jpg) no-repeat;width:81px;height:32px;color:#ffffff;font-size:14px;font-weight:bold;border:0;}
+.but80_hover{background-position:0px -32px;}
+.fa-joomla{margin-right:5px}

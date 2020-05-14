@@ -1,0 +1,65 @@
+﻿	#cvs1,#cvs2,#cvs3{
+		position:absolute;
+		left:0;
+		top:0;
+	}
+	#canvasDiv{
+		position:relative;
+	    top:0;
+		width:800px;
+		height:600px;
+		margin:0 auto;
+		border-radius:5px;
+		background:rgba(255,255,255,0.8);
+	
+		border-radius:10px;
+		box-shadow:0 0 15px 1px rgba(0, 0, 0, 0.8);
+        
+		
+	}
+	#infoInsert{
+		position:absolute;
+		width:582px;
+	   	font-size:14px;
+		background-color:#fff;
+		border:solid 1px #999;
+		padding:20px 70px;
+		border-radius:5px;
+		z-index:10000;
+	}
+	#infoInsert label,#infoInsert span{display:inline-block;width:100px;height:35px;line-height:35px;margin-bottom:10px;vertical-align:top;font-weight:bold}
+	#infoInsert span{	font-size:18px;}
+	#infoInsert span{width:100%;border-bottom:solid 1px #ccc;font-weight:bold;}
+	#infoInsert input,#infoInsert select,#infoInsert textarea{
+		width:340px;
+		padding:7px 10px; 
+		margin-bottom:10px;
+		font-size:14px;
+	}
+   #infoInsert .circuitsbox{width:340px;border:solid #999 1px;display:inline-block;padding:15px;float:right;margin-bottom:10px;}
+   .circuitsbox{position:relative;top:0;}
+   .circuitsbox i{position:absolute;left:350px;top:10px;font-size:18px;color:#999;font-weight:400}
+   .circuitsbox i.fa-check-circle{left:310px;top:70px;}
+   .circuitsbox i.fa-minus{left:370px;}
+   #infoInsert .circuitsbox input,#infoInsert .circuitsbox select,#infoInsert .circuitsbox textarea{
+     	width:180px;
+		padding:7px 10px; 
+		margin-bottom:10px;
+		font-size:14px;}
+	
+	#DOMMouseScrollShow{font-size:14px;}
+	#layerNo{
+	height:30px;
+	font-size:14px;
+	}
+	#DOMMouseScrollShow input{padding:7px 10px;}
+	
+	.canvasDivbox{background:url(../img/gplot.jpg) no-repeat 0 0;background-size:cover;height:700px;padding-top:50px;border-radius:5px 5px 0 0;}
+	.chioceresearch{text-align:center;border-radius:0 0 5px 5px;}
+	#infoInsert	.chioceresearch{background:none;border:none;margin-bottom:0;}
+.infoInsertrow{text-align:center;}
+.infoInsertrow .btn-7{background:#1A5DAB;box-shadow:0 3px #103F76}
+#cuebox.chioceresearch{background:#fff;border:1px solid #999;border-radius:5px;padding:20px;margin-bottom:5px;text-align:left;height:auto;overflow:hidden}
+#cuebox.chioceresearch #layerNo label{width:auto;padding-right:10px;}
+#cuebox.chioceresearch #layerNo{color:#cb4330}
+#cuebox.chioceresearch input{width:50%;}
